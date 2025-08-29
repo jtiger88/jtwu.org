@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact JT Wu - Speaking Engagements, Media & Advisory Consultations</title>
+    <meta name="description" content="Contact JT Wu for speaking engagements, media interviews, or advisory consultations. Expert in strategic finance, civic leadership, and cross-sector innovation.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --navy: #2c3e50;
+            --slate: #5a6c7d;
+            --princeton-orange: #e67e22;
+            --warm-gold: #d4a574;
+            --light-gray: #f8f9fa;
+            --accent-teal: #3498db;
+            --white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--slate);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--navy);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--slate);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--princeton-orange);
+        }
+
+        .nav-links a.active {
+            color: var(--princeton-orange);
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        main {
+            padding-top: 90px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 4rem 0;
+            background: var(--light-gray);
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--princeton-orange);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--slate);
+            line-height: 1.7;
+        }
+
+        /* Contact Methods Section */
+        .contact-methods {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--navy);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--princeton-orange);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            background: white;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--princeton-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .contact-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+
+        .contact-card p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--slate);
+            line-height: 1.6;
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--princeton-orange);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .contact-button:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+        }
+
+        /* Speaking Section */
+        .speaking-section {
+            padding: 6rem 0;
+            background: var(--light-gray);
+        }
+
+        .speaking-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            margin-top: 3rem;
+        }
+
+        .speaking-info h4 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+
+        .speaking-topics {
+            list-style: none;
+        }
+
+        .speaking-topics li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .speaking-topics li::before {
+            content: '▶';
+            color: var(--princeton-orange);
+            position: absolute;
+            left: 0;
+            font-size: 0.8rem;
+        }
+
+        .media-info {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--princeton-orange);
+        }
+
+        .media-info h4 {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            color: var(--navy);
+        }
+
+        .media-info p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .media-note {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-style: italic;
+            color: var(--slate);
+            font-size: 0.95rem;
+        }
+
+        /* Contact Form Section */
+        .contact-form-section {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--princeton-orange);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid rgba(0,0,0,0.1);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--princeton-orange);
+            outline: none;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--princeton-orange);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .submit-button:hover:not(:disabled) {
+            background: #d35400;
+            transform: translateY(-2px);
+        }
+
+        .submit-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Social Links Section */
+        .social-section {
+            padding: 4rem 0;
+            background: var(--navy);
+            color: white;
+            text-align: center;
+        }
+
+        .social-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: var(--princeton-orange);
+            transform: translateY(-5px);
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover .social-icon {
+            background: var(--princeton-orange);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--princeton-orange);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .speaking-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .social-links {
+                flex-wrap: wrap;
+                gap: 2rem;
+            }
+
+            .contact-form {
+                padding: 2rem;
+            }
+        }
+
+        /* Focus states */
+        *:focus {
+            outline: 2px solid var(--princeton-orange);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">JT Wu</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="advisory.html">Advisory</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">Let's Connect</h1>
+                <p class="hero-subtitle">Thought Leadership & Strategic Collaboration</p>
+                <p class="hero-description">
+                    Whether you're seeking advisory services, booking a speaking engagement, or exploring strategic partnerships, 
+                    JT welcomes meaningful collaborations that drive positive impact.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Methods -->
+        <section class="contact-methods">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">💼</div>
+                        <h3>Advisory Services</h3>
+                        <p>Schedule a consultation to discuss M&A transactions, strategic finance needs, or fractional CFO services through Magnolia Prospect.</p>
+                        <a href="mailto:jt@jtwu.org?subject=Advisory Services Inquiry" class="contact-button">Schedule Consultation</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">🎤</div>
+                        <h3>Speaking Engagements</h3>
+                        <p>Book JT for keynotes on civic innovation, cross-sector strategy, financial leadership, and nonprofit excellence.</p>
+                        <a href="mailto:jt@jtwu.org?subject=Speaking Engagement Inquiry" class="contact-button">Book Speaking</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">📰</div>
+                        <h3>Media & Press</h3>
+                        <p>Media interviews, expert commentary, and thought leadership opportunities on finance, civic engagement, and innovation.</p>
+                        <a href="mailto:jt@jtwu.org?subject=Media Inquiry" class="contact-button">Media Inquiries</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Speaking & Media Section -->
+        <section class="speaking-section">
+            <div class="container">
+                <h2 class="section-title">Speaking & Media</h2>
+                
+                <div class="speaking-content">
+                    <div class="speaking-info">
+                        <h4>Speaking Topics</h4>
+                        <ul class="speaking-topics">
+                            <li>Strategic Finance & M&A Best Practices</li>
+                            <li>Cross-Sector Leadership and Innovation</li>
+                            <li>Public-Private Partnerships and Civic Engagement</li>
+                            <li>Nonprofit Excellence and Social Impact</li>
+                            <li>Financial Literacy and Education Innovation</li>
+                            <li>Asian American Leadership and Civic Participation</li>
+                            <li>Building Sustainable Community Organizations</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="media-info">
+                        <h4>Media & Expertise</h4>
+                        <p>
+                            JT is available for media interviews, expert commentary, and thought leadership discussions. 
+                            He has been featured in national publications and provides insights on strategic finance, 
+                            civic innovation, and cross-sector collaboration.
+                        </p>
+                        <p>
+                            <strong>Upcoming:</strong> Substack newsletter "Margin Notes with JT Wu" launching soon, 
+                            featuring insights on strategic finance, civic leadership, and community impact.
+                        </p>
+                        <div class="media-note">
+                            <strong>Media Kit:</strong> High-resolution photos, speaker bio, and topic sheets available upon request. 
+                            Response time typically within 24 hours for media inquiries.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form-section">
+            <div class="container">
+                <h2 class="section-title">Send a Message</h2>
+                
+                <div class="form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="organization">Organization / Affiliation</label>
+                            <input type="text" id="organization" name="organization">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="inquiry-type">Inquiry Type</label>
+                            <select id="inquiry-type" name="inquiry-type">
+                                <option value="general">General Inquiry</option>
+                                <option value="advisory">Advisory Services</option>
+                                <option value="speaking">Speaking Engagement</option>
+                                <option value="media">Media / Press</option>
+                                <option value="partnership">Strategic Partnership</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Please provide details about your inquiry, timeline, and any specific requirements..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Links -->
+        <section class="social-section">
+            <div class="container">
+                <h2 class="social-title">Connect on Social</h2>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/jtwu" target="_blank" class="social-link">
+                        <div class="social-icon">💼</div>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://twitter.com/jtwugeorgia" target="_blank" class="social-link">
+                        <div class="social-icon">🐦</div>
+                        <span>Twitter / X</span>
+                    </a>
+                    <a href="#" target="_blank" class="social-link">
+                        <div class="social-icon">📝</div>
+                        <span>Substack</span>
+                        <small>(Coming Soon)</small>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="advisory.html">Advisory Services</a>
+                <a href="https://linkedin.com/in/jtwu" target="_blank">LinkedIn</a>
+            </div>
+            <p>&copy; 2025 Jonathan "JT" Wu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const submitBtn = this.querySelector('.submit-button');
+            const originalText = submitBtn.textContent;
+            
+            // Basic validation
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            
+            if (!name || !email || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Show loading state
+            submitBtn.textContent = 'Sending Message...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission (replace with actual form handler)
+            setTimeout(() => {
+                alert('Thank you for your message! JT will be in touch within 24 hours.');
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 1000);
+            
+            // For production, replace with actual form submission:
+            // fetch('/api/contact', {
+            //     method: 'POST',
+            //     body: formData
+            // }).then(response => {
+            //     // handle response
+            // });
+        });
+    </script>
+</body>
+</html>

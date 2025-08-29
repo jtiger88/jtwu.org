@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advisory Services - Magnolia Prospect | JT Wu Strategic Finance</title>
+    <meta name="description" content="White-glove advisory services from JT Wu's Magnolia Prospect. Expert M&A execution, strategic finance, and fractional CFO services for business owners and family offices.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --navy: #2c3e50;
+            --slate: #5a6c7d;
+            --princeton-orange: #e67e22;
+            --warm-gold: #d4a574;
+            --light-gray: #f8f9fa;
+            --accent-teal: #3498db;
+            --white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--slate);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--navy);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--slate);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--princeton-orange);
+        }
+
+        .nav-links a.active {
+            color: var(--princeton-orange);
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        main {
+            padding-top: 90px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--light-gray) 0%, rgba(255,255,255,0.9) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--princeton-orange) 0%, transparent 70%);
+            opacity: 0.03;
+            top: -200px;
+            right: -200px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--navy);
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--princeton-orange);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .hero-description {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+            color: var(--slate);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--princeton-orange);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            text-align: center;
+            color: var(--princeton-orange);
+            margin-bottom: 4rem;
+            font-weight: 600;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--princeton-orange);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            background: white;
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            color: var(--navy);
+        }
+
+        .service-card p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--slate);
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 6rem 0;
+            background: var(--navy);
+            color: white;
+        }
+
+        .process-section .section-title {
+            color: white;
+        }
+
+        .process-section .section-subtitle {
+            color: var(--princeton-orange);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--princeton-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+
+        .process-step h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .process-step p {
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* Client Results Section */
+        .results-section {
+            padding: 6rem 0;
+            background: var(--light-gray);
+        }
+
+        .results-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .results-intro {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: var(--slate);
+            line-height: 1.7;
+        }
+
+        .client-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .client-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .client-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .client-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+
+        .client-card p {
+            color: var(--slate);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Contact CTA Section */
+        .contact-cta-section {
+            padding: 5rem 0;
+            background: white;
+            text-align: center;
+        }
+
+        .contact-cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--navy);
+        }
+
+        .contact-cta-text {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            color: var(--slate);
+            line-height: 1.6;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--princeton-orange);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--navy);
+            border: 2px solid var(--navy);
+            padding: 1.2rem 2.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .btn-secondary:hover {
+            background: var(--navy);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--princeton-orange);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-description {
+                font-size: 1.1rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        /* Focus states */
+        *:focus {
+            outline: 2px solid var(--princeton-orange);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">JT Wu</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="advisory.html" class="active">Advisory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Magnolia Prospect</h1>
+                    <p class="hero-subtitle">White-Glove Advisory for Founders & Families</p>
+                    <p class="hero-description">
+                        Strategic finance advisory services helping business owners, family offices, and civic institutions 
+                        navigate growth, transitions, and meaningful exits with expertise and integrity.
+                    </p>
+                    <a href="contact.html" class="cta-button">Schedule a Consultation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section">
+            <div class="container">
+                <h2 class="section-title">Advisory Services</h2>
+                <p class="section-subtitle">Comprehensive Strategic Finance Solutions</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Strategic Finance & Capital Raises</h3>
+                        <p>Expert guidance on funding strategies, capital structure optimization, and investor relations. 
+                           From seed funding to growth capital, we help you secure the right financing at the right terms 
+                           to fuel your strategic objectives.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Sell-Side M&A and Roll-Up Execution</h3>
+                        <p>Comprehensive transaction support from strategy development to closing. We manage the entire 
+                           process including valuation, buyer identification, due diligence coordination, and negotiation 
+                           to maximize value realization.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Fractional CFO & Business Development</h3>
+                        <p>Strategic financial leadership without the full-time commitment. Our fractional CFO services 
+                           provide executive-level financial expertise, strategic planning, and growth acceleration 
+                           tailored to your organization's stage and needs.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Financial Modeling & Valuation</h3>
+                        <p>Sophisticated financial analysis and modeling to support informed decision-making. From DCF 
+                           models to complex scenario analysis, we provide the quantitative foundation for strategic 
+                           initiatives and transaction evaluation.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Turnaround & Restructuring</h3>
+                        <p>Crisis navigation and operational restructuring to restore financial health and operational 
+                           efficiency. We work with stakeholders to develop and execute comprehensive turnaround strategies 
+                           that preserve value and ensure sustainable recovery.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Stakeholder Communication & Policy Navigation</h3>
+                        <p>Strategic messaging and stakeholder management across complex organizational environments. 
+                           Our expertise in both private sector and public policy helps navigate regulatory requirements 
+                           and maintain stakeholder alignment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process-section">
+            <div class="container">
+                <h2 class="section-title">Our Process</h2>
+                <p class="section-subtitle">A Systematic Approach to Strategic Excellence</p>
+                
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4>Discovery & Assessment</h4>
+                        <p>Comprehensive analysis of your current situation, objectives, and constraints to develop a clear understanding of the strategic landscape.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4>Strategy Development</h4>
+                        <p>Collaborative strategy formulation incorporating financial modeling, market analysis, and stakeholder considerations to create actionable plans.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4>Implementation Support</h4>
+                        <p>Hands-on execution support including process management, stakeholder coordination, and real-time strategy adjustment as situations evolve.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4>Outcome Optimization</h4>
+                        <p>Continuous monitoring and optimization to ensure strategic objectives are achieved and value is maximized throughout the engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Results Section -->
+        <section class="results-section">
+            <div class="container">
+                <h2 class="section-title">Client Success</h2>
+                <div class="results-content">
+                    <p class="results-intro">
+                        Our clients span multiple industries and organizational types, from high-growth startups to 
+                        established family businesses to complex civic institutions. We bring the same commitment 
+                        to excellence and strategic thinking to every engagement.
+                    </p>
+                    
+                    <div class="client-highlights">
+                        <div class="client-card">
+                            <h4>High Ground Title</h4>
+                            <p>Roll-up CFO services and sponsor coordination for strategic consolidation in the title insurance sector.</p>
+                        </div>
+                        
+                        <div class="client-card">
+                            <h4>Artisse</h4>
+                            <p>Crypto/AI venture structuring and strategic finance advisory for innovative technology platform.</p>
+                        </div>
+                        
+                        <div class="client-card">
+                            <h4>CTSP Holdings</h4>
+                            <p>Multisector portfolio management and strategic advisory for diversified investment holding company.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section -->
+        <section class="contact-cta-section">
+            <div class="container">
+                <div class="contact-cta-content">
+                    <h2 class="contact-cta-title">Ready to Get Started?</h2>
+                    <p class="contact-cta-text">
+                        Whether you're exploring a transaction, need fractional CFO support, or require strategic financial guidance, 
+                        we're here to help you achieve your objectives with confidence and clarity.
+                    </p>
+                    <div class="contact-buttons">
+                        <a href="contact.html" class="btn-primary">Schedule Consultation</a>
+                        <a href="about.html" class="btn-secondary">Learn About JT</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="https://linkedin.com/in/jtwu" target="_blank">LinkedIn</a>
+            </div>
+            <p>&copy; 2025 Jonathan "JT" Wu. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
