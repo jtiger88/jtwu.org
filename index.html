@@ -66,25 +66,30 @@
         }
         
         :root {
-            --navy: #2c3e50;
-            --slate: #5a6c7d;
-            --princeton-orange: #e67e22;
+            --navy: #1a1d29;
+            --slate: #6b7280;
+            --princeton-orange: #f97316;
+            --purple-gradient-start: #8b5cf6;
+            --purple-gradient-end: #06b6d4;
+            --dark-bg: #0f0f1a;
+            --dark-card: #1e1e2e;
+            --light-text: #f8fafc;
+            --accent-blue: #3b82f6;
             --warm-gold: #d4a574;
-            --light-gray: #f8f9fa;
-            --accent-teal: #3498db;
             --white: #ffffff;
         }
         
         body {
             font-family: 'Inter', sans-serif;
-            color: var(--slate);
+            color: var(--light-text);
             line-height: 1.6;
             overflow-x: hidden;
+            background: var(--dark-bg);
         }
         
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-            color: var(--navy);
+            color: var(--light-text);
         }
 
         /* Navigation */
@@ -92,11 +97,11 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(15, 15, 26, 0.95);
+            backdrop-filter: blur(15px);
             z-index: 1000;
             padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
         }
         
@@ -113,7 +118,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--navy);
+            color: var(--light-text);
         }
         
         .nav-links {
@@ -124,15 +129,17 @@
         
         .nav-links a {
             text-decoration: none;
-            color: var(--slate);
+            color: var(--light-text);
             font-weight: 500;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
             font-size: 0.95rem;
+            opacity: 0.8;
         }
         
         .nav-links a:hover,
         .nav-links a:focus {
             color: var(--princeton-orange);
+            opacity: 1;
             outline: 2px solid var(--princeton-orange);
             outline-offset: 2px;
         }
@@ -170,47 +177,76 @@
         /* Hero Section */
         .hero {
             min-height: 100vh;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             align-items: center;
-            background: linear-gradient(135deg, var(--light-gray) 0%, rgba(255,255,255,0.9) 100%);
+            background: var(--dark-bg);
             position: relative;
             overflow: hidden;
+            padding: 2rem 0;
         }
         
         .hero::before {
             content: '';
             position: absolute;
-            width: 500px;
-            height: 500px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--purple-gradient-start) 0%, transparent 70%);
+            opacity: 0.1;
+            top: -300px;
+            left: -300px;
+            animation: float 25s ease-in-out infinite;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
             background: radial-gradient(circle, var(--princeton-orange) 0%, transparent 70%);
-            opacity: 0.05;
-            top: -250px;
-            right: -250px;
-            animation: float 20s ease-in-out infinite;
+            opacity: 0.08;
+            bottom: -200px;
+            right: -200px;
+            animation: float 20s ease-in-out infinite reverse;
         }
         
         @keyframes float {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            50% { transform: translate(-50px, 50px) rotate(180deg); }
+            0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+            33% { transform: translate(30px, -30px) rotate(120deg) scale(1.1); }
+            66% { transform: translate(-20px, 20px) rotate(240deg) scale(0.9); }
         }
         
         .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
             padding: 0 2rem;
             z-index: 1;
             position: relative;
-            text-align: center;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--purple-gradient-start), var(--purple-gradient-end));
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease;
         }
         
         .tagline {
-            font-size: 4rem;
+            font-size: 4.5rem;
             font-weight: 700;
-            margin-bottom: 2rem;
-            background: linear-gradient(135deg, var(--navy) 0%, var(--princeton-orange) 100%);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            animation: fadeInUp 1s ease 0.1s both;
+        }
+        
+        .tagline .highlight {
+            background: linear-gradient(135deg, var(--purple-gradient-start), var(--purple-gradient-end));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: fadeInUp 1s ease;
+            background-clip: text;
         }
         
         @keyframes fadeInUp {
@@ -225,68 +261,180 @@
         }
         
         .intro-blurb {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: var(--slate);
-            max-width: 800px;
-            margin: 0 auto 3rem;
-            line-height: 1.8;
+            max-width: 500px;
+            margin-bottom: 2rem;
+            line-height: 1.6;
             animation: fadeInUp 1s ease 0.2s both;
+        }
+        
+        .credentials {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin: 2rem 0;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+        
+        .credential-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.95rem;
+            color: var(--light-text);
+            opacity: 0.9;
+        }
+        
+        .credential-icon {
+            width: 8px;
+            height: 8px;
+            background: var(--princeton-orange);
+            border-radius: 50%;
+            flex-shrink: 0;
         }
         
         .cta-buttons {
             display: flex;
-            gap: 2rem;
-            justify-content: center;
+            gap: 1.5rem;
             flex-wrap: wrap;
             animation: fadeInUp 1s ease 0.4s both;
         }
         
+        .hero-image {
+            padding: 0 2rem;
+            z-index: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-photo-container {
+            position: relative;
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .hero-photo {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+        }
+        
+        .photo-placeholder {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: var(--dark-card);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--slate);
+            font-size: 1.2rem;
+            font-weight: 600;
+            border: 2px dashed var(--slate);
+            opacity: 0.7;
+        }
+        
+        .testimonial {
+            position: absolute;
+            bottom: -50px;
+            right: -30px;
+            background: var(--dark-card);
+            padding: 1.5rem;
+            border-radius: 15px;
+            max-width: 300px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            font-size: 0.9rem;
+            color: var(--light-text);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--princeton-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .author-info h5 {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .author-info p {
+            font-size: 0.8rem;
+            color: var(--slate);
+            margin: 0;
+        }
+        
         .btn {
-            padding: 1.2rem 2.5rem;
+            padding: 1rem 2rem;
             text-decoration: none;
             font-weight: 600;
-            border-radius: 50px;
+            border-radius: 8px;
             transition: all 0.3s ease;
             display: inline-block;
             cursor: pointer;
             border: none;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
         
         .btn-primary {
-            background: var(--princeton-orange);
+            background: linear-gradient(135deg, var(--purple-gradient-start), var(--purple-gradient-end));
             color: white;
-            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
         }
         
         .btn-primary:hover,
         .btn-primary:focus {
-            background: #d35400;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
-            outline: 2px solid #d35400;
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+            outline: 2px solid var(--purple-gradient-start);
             outline-offset: 2px;
         }
         
         .btn-secondary {
             background: transparent;
-            color: var(--navy);
-            border: 2px solid var(--navy);
+            color: var(--light-text);
+            border: 2px solid rgba(255,255,255,0.3);
         }
         
         .btn-secondary:hover,
         .btn-secondary:focus {
-            background: var(--navy);
-            color: white;
+            background: rgba(255,255,255,0.1);
+            border-color: var(--princeton-orange);
+            color: var(--princeton-orange);
             transform: translateY(-2px);
-            outline: 2px solid var(--navy);
-            outline-offset: 2px;
         }
 
-        /* Quick Intro Section */
-        .quick-intro {
-            padding: 5rem 0;
-            background: white;
+        /* Logo Strip Section */
+        .logo-strip {
+            padding: 4rem 0;
+            background: rgba(30, 30, 46, 0.8);
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
         
         .container {
@@ -295,42 +443,75 @@
             padding: 0 2rem;
         }
         
-        .intro-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
+        .logo-strip h3 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--slate);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
         }
         
-        .intro-card {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 10px;
+        .logos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 2rem;
+            align-items: center;
+            opacity: 0.6;
+        }
+        
+        .logo-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+        
+        .logo-item:hover {
+            opacity: 1;
+            background: rgba(255,255,255,0.05);
+            transform: translateY(-2px);
+        }
+        
+        .logo-item img {
+            max-height: 40px;
+            max-width: 100%;
+            filter: grayscale(100%) brightness(0.7);
             transition: all 0.3s ease;
         }
         
-        .intro-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        .logo-item:hover img {
+            filter: grayscale(0%) brightness(1);
         }
         
-        .intro-card h3 {
-            margin-bottom: 1rem;
-            color: var(--navy);
-            font-size: 1.5rem;
-        }
-        
-        .intro-card p {
+        .logo-placeholder {
+            font-size: 0.8rem;
             color: var(--slate);
-            line-height: 1.6;
+            text-align: center;
+            padding: 1rem;
+            border: 1px dashed rgba(255,255,255,0.2);
+            border-radius: 8px;
+            opacity: 0.5;
+            font-weight: 500;
+        }
+        
+        .logo-item:hover .logo-placeholder {
+            color: var(--princeton-orange);
+            border-color: var(--princeton-orange);
+            opacity: 0.8;
         }
 
         /* Footer */
         footer {
-            background: var(--navy);
-            color: white;
+            background: var(--dark-card);
+            color: var(--light-text);
             text-align: center;
             padding: 3rem 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
         
         .footer-links {
@@ -341,17 +522,42 @@
         }
         
         .footer-links a {
-            color: white;
+            color: var(--light-text);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
+            opacity: 0.8;
         }
         
         .footer-links a:hover {
             color: var(--princeton-orange);
+            opacity: 1;
         }
 
         /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 4rem 0 2rem;
+            }
+            
+            .hero-content {
+                order: 2;
+                margin-top: 2rem;
+            }
+            
+            .hero-image {
+                order: 1;
+            }
+            
+            .testimonial {
+                position: static;
+                margin: 2rem auto 0;
+                max-width: 100%;
+            }
+        }
+        
         @media (max-width: 768px) {
             .mobile-menu-toggle {
                 display: block;
@@ -362,10 +568,10 @@
                 top: 70px;
                 left: -100%;
                 width: 100%;
-                background: white;
+                background: var(--dark-bg);
                 flex-direction: column;
                 padding: 2rem;
-                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                border-top: 1px solid rgba(255,255,255,0.1);
                 transition: left 0.3s ease;
             }
             
@@ -374,11 +580,12 @@
             }
             
             .tagline {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
             
             .intro-blurb {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
+                max-width: 100%;
             }
             
             .cta-buttons {
@@ -388,8 +595,22 @@
             
             .btn {
                 width: 100%;
-                max-width: 300px;
+                max-width: 280px;
                 text-align: center;
+            }
+            
+            .logos-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 1rem;
+            }
+            
+            .hero-badge {
+                font-size: 0.8rem;
+                padding: 0.4rem 1rem;
+            }
+            
+            .credentials {
+                align-items: center;
             }
         }
 
@@ -409,6 +630,37 @@
         *:focus {
             outline: 2px solid var(--princeton-orange);
             outline-offset: 2px;
+        }
+        
+        /* Scroll animations enhanced */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .hero-content {
+            animation: slideInLeft 1s ease;
+        }
+        
+        .hero-image {
+            animation: slideInRight 1s ease 0.2s both;
         }
         
         /* Loading states */
@@ -444,35 +696,85 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1 class="tagline">Capital & Community.<br>Strategy with Purpose.</h1>
+            <div class="hero-badge">#1 Strategic Finance Advisor</div>
+            <h1 class="tagline"><span class="highlight">Strategic Finance</span><br>Keynote Speaker.</h1>
             <p class="intro-blurb">
-                JT Wu is a civic-minded entrepreneur and strategic finance advisor who bridges sectors to unlock 
-                transformative impact. A Princeton graduate, nonprofit founder, and seasoned M&A professional, 
-                JT brings a rare blend of public service and private-sector acumen to every endeavor.
+                Transform your organization with expert M&A guidance, strategic finance leadership, 
+                and civic innovation insights from JT Wu.
             </p>
+            
+            <div class="credentials">
+                <div class="credential-item">
+                    <div class="credential-icon"></div>
+                    <span>Princeton Graduate & M&A Professional</span>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-icon"></div>
+                    <span>Chairman, Georgia's Largest Public Library System</span>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-icon"></div>
+                    <span>Founder of Nationally Recognized Nonprofit</span>
+                </div>
+                <div class="credential-item">
+                    <div class="credential-icon"></div>
+                    <span>Strategic Finance & Civic Leadership Expert</span>
+                </div>
+            </div>
+            
             <div class="cta-buttons">
-                <a href="about.html" class="btn btn-primary">Learn More About JT</a>
-                <a href="advisory.html" class="btn btn-secondary">Advisory Services</a>
-                <a href="contact.html" class="btn btn-secondary">Let's Connect</a>
+                <a href="contact.html" class="btn btn-primary">CONTACT ME →</a>
+                <a href="about.html" class="btn btn-secondary">MORE ABOUT JT</a>
+            </div>
+        </div>
+        
+        <div class="hero-image">
+            <div class="hero-photo-container">
+                <img src="jt-wu-professional.jpg" alt="Jonathan JT Wu - Strategic Finance Advisor" class="hero-photo" style="display: none;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="photo-placeholder">Professional Photo<br>jt-wu-professional.jpg</div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"JT's strategic finance expertise and civic leadership experience make him an invaluable advisor for any organization seeking transformational growth."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">GC</div>
+                        <div class="author-info">
+                            <h5>Georgia Community</h5>
+                            <p>Civic Leader</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Quick Intro Section -->
-    <section class="quick-intro">
+    <!-- Logo Strip Section -->
+    <section class="logo-strip">
         <div class="container">
-            <div class="intro-grid fade-in">
-                <div class="intro-card">
-                    <h3>Strategic Finance</h3>
-                    <p>Expert guidance on M&A transactions, capital raises, and corporate strategy through Magnolia Prospect advisory services.</p>
+            <h3>Trusted by Leading Organizations</h3>
+            <div class="logos-grid fade-in">
+                <div class="logo-item">
+                    <img src="logos/preface-logo.svg" alt="Preface" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="logo-placeholder">Preface</div>
                 </div>
-                <div class="intro-card">
-                    <h3>Civic Leadership</h3>
-                    <p>Chairman of Georgia's largest public library system and founder of nationally recognized literacy nonprofit Preface.</p>
+                <div class="logo-item">
+                    <img src="logos/princeton-logo.svg" alt="Princeton University" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="logo-placeholder">Princeton</div>
                 </div>
-                <div class="intro-card">
-                    <h3>Cross-Sector Impact</h3>
-                    <p>Bridging private sector expertise with public service to create meaningful change in communities and organizations.</p>
+                <div class="logo-item">
+                    <img src="logos/gwinnett-library-logo.svg" alt="Gwinnett County Public Library" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="logo-placeholder">GCPL</div>
+                </div>
+                <div class="logo-item">
+                    <img src="logos/gwinnett-chamber-logo.svg" alt="Gwinnett Chamber" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="logo-placeholder">Chamber</div>
+                </div>
+                <div class="logo-item">
+                    <img src="logos/asset-roofing-logo.svg" alt="Asset Roofing" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="logo-placeholder">Asset Roofing</div>
+                </div>
+                <div class="logo-item">
+                    <img src="logos/state-department-logo.svg" alt="U.S. State Department" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="logo-placeholder">State Dept</div>
                 </div>
             </div>
         </div>
