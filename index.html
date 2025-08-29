@@ -66,11 +66,12 @@
         }
         
         :root {
-            --navy: #1e3a5f;
-            --slate: #4a5568;
-            --princeton-orange: #ff6b35;
+            --navy: #2c3e50;  /* Darker slate-blue from mockup */
+            --slate: #5a6c7d; /* Softer slate-gray */
+            --princeton-orange: #e67e22; /* Warmer orange accent */
             --warm-gold: #d4a574;
-            --light-gray: #f7fafc;
+            --light-gray: #f8f9fa; /* Cleaner light background */
+            --accent-teal: #3498db; /* Subtle blue accent */
             --white: #ffffff;
         }
         
@@ -312,19 +313,149 @@
         /* About Section */
         .about {
             background: white;
+            padding: 6rem 0;
+        }
+        
+        .about-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .professional-title {
+            font-size: 2.2rem;
+            color: var(--navy);
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            margin: 0;
         }
         
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 2fr 1fr;
             gap: 4rem;
-            align-items: center;
+            align-items: start;
+        }
+        
+        .about-text {
+            padding-right: 2rem;
         }
         
         .about-text p {
             margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--slate);
+            text-align: justify;
+        }
+        
+        .bio-intro {
+            font-size: 1.15rem !important;
+            font-weight: 500;
+            color: var(--navy) !important;
+        }
+        
+        .about-sidebar {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--princeton-orange);
+        }
+        
+        .professional-photo {
+            margin-bottom: 2rem;
+        }
+        
+        .photo-placeholder {
+            background: var(--slate);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        
+        .contact-info h4 {
+            color: var(--navy);
+            margin-bottom: 1rem;
             font-size: 1.1rem;
-            line-height: 1.8;
+        }
+        
+        .contact-info p {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        
+        /* Organizations Section */
+        .organizations {
+            background: var(--light-gray);
+            padding: 5rem 0;
+        }
+        
+        .organizations .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            font-size: 2.5rem;
+        }
+        
+        .organizations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        
+        .org-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-radius: 8px;
+            min-height: 120px;
+        }
+        
+        .org-logo img {
+            max-height: 60px;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            filter: grayscale(100%) opacity(0.7);
+            transition: all 0.3s ease;
+        }
+        
+        .org-logo:hover img {
+            filter: grayscale(0%) opacity(1);
+            transform: scale(1.05);
+        }
+        
+        .org-logo:hover {
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+        
+        .logo-placeholder {
+            display: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--slate);
+            text-align: center;
+            padding: 1rem;
+            background: white;
+            border: 2px dashed var(--slate);
+            border-radius: 8px;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        
+        .org-logo:hover .logo-placeholder {
+            color: var(--princeton-orange);
+            border-color: var(--princeton-orange);
+            opacity: 1;
         }
         
         .about-image {
@@ -661,33 +792,84 @@
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
-            <h2 class="section-title fade-in">About JT</h2>
-            <p class="section-subtitle fade-in">Rooted in Georgia. Engaged Globally. Driven by Impact.</p>
+            <div class="about-header fade-in">
+                <h2 class="professional-title">Jonathan "JT" Wu | Strategic Advisor & Civic Leader</h2>
+            </div>
             
             <div class="about-content fade-in">
                 <div class="about-text">
-                    <p>
-                        JT Wu is an award-winning civic leader, trusted advisor, and cross-sector strategist. 
-                        He is the Founder and Executive Director of <strong>Preface</strong>, a nationally recognized 
-                        early childhood literacy nonprofit that trains high school Ambassadors to mentor young students 
-                        through a proprietary multilingual mentorship platform.
+                    <p class="bio-intro">
+                        Jonathan "JT" Wu is a seasoned strategic finance advisor and civic entrepreneur with deep expertise in 
+                        mergers & acquisitions, corporate strategy, and cross-sector leadership. As Chairman of Georgia's largest public 
+                        library system and founder of nationally recognized organizations, JT brings a distinguished blend of private-sector 
+                        acumen and public service to every engagement.
                     </p>
                     <p>
-                        He also serves as Chairman of the Gwinnett County Public Library System, the largest in Georgia, 
-                        where he has helped deliver a 10x return on public dollars. A graduate of Princeton University, 
-                        JT combines experience in private equity and investment banking with a passion for 
-                        community-centered growth and public good.
+                        Beyond the private sector, JT is a recognized leader in public-private partnerships and civic innovation. 
+                        He serves as Chairman of the Gwinnett County Public Library System, where he has delivered transformational 
+                        growth and operational excellence. He is also the Founder and Executive Director of <strong>Preface</strong>, 
+                        a nationally recognized early childhood literacy nonprofit, and previously liaised with the U.S. State Department 
+                        on diplomatic and international development initiatives.
                     </p>
                     <p>
-                        In all his work, JT leverages financial expertise, technology-forward solutions, and 
-                        mission-driven leadership to build stronger institutions and a more connected world.
+                        A sought-after speaker and thought leader, JT has been featured in national publications and recognized 
+                        as one of Georgia's most influential civic leaders. He received his A.B. cum laude in Public and International 
+                        Affairs from Princeton University and maintains active involvement in professional and philanthropic organizations 
+                        across the Southeast.
                     </p>
                 </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <img src="jt-wu-professional.jpg" alt="Jonathan JT Wu - Professional headshot" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px; display: none;" onerror="this.style.display='none'; this.parentElement.innerHTML='[Professional Photo - Upload jt-wu-professional.jpg]';">
-                        [Professional Photo - Upload jt-wu-professional.jpg]
+                <div class="about-sidebar">
+                    <div class="professional-photo">
+                        <img src="jt-wu-professional.jpg" alt="Jonathan JT Wu - Professional headshot" style="width: 100%; height: auto; border-radius: 8px; display: none;" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\"photo-placeholder\">[Professional Photo]</div>';">
+                        <div class="photo-placeholder">[Professional Photo]</div>
                     </div>
+                    <div class="contact-info">
+                        <h4>Contact Information</h4>
+                        <p><strong>Email:</strong> jt@jtwu.org</p>
+                        <p><strong>LinkedIn:</strong> linkedin.com/in/jtwu</p>
+                        <p><strong>Based:</strong> Atlanta, Georgia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizations Section -->
+    <section class="organizations" id="organizations">
+        <div class="container">
+            <h2 class="section-title fade-in">Trusted by Leading Organizations</h2>
+            <div class="organizations-grid fade-in">
+                <div class="org-logo" data-org="preface">
+                    <img src="logos/preface-logo.svg" alt="Preface" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="logo-placeholder">Preface</div>
+                </div>
+                <div class="org-logo" data-org="gcpl">
+                    <img src="logos/gwinnett-library-logo.svg" alt="Gwinnett County Public Library" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="logo-placeholder">Gwinnett County Public Library</div>
+                </div>
+                <div class="org-logo" data-org="princeton">
+                    <img src="logos/princeton-logo.svg" alt="Princeton University" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="logo-placeholder">Princeton University</div>
+                </div>
+                <div class="org-logo" data-org="chamber">
+                    <img src="logos/gwinnett-chamber-logo.svg" alt="Gwinnett Chamber of Commerce" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="logo-placeholder">Gwinnett Chamber</div>
+                </div>
+                <div class="org-logo" data-org="state-dept">
+                    <img src="logos/state-department-logo.svg" alt="U.S. Department of State" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="logo-placeholder">U.S. State Department</div>
+                </div>
+                <div class="org-logo" data-org="asset-roofing">
+                    <img src="logos/asset-roofing-logo.svg" alt="Asset Roofing" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="logo-placeholder">Asset Roofing</div>
+                </div>
+                <div class="org-logo" data-org="emerging-voters">
+                    <img src="logos/emerging-voters-logo.svg" alt="Emerging Voters" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="logo-placeholder">Emerging Voters</div>
+                </div>
+                <div class="org-logo" data-org="rotary">
+                    <img src="logos/rotary-logo.svg" alt="Rotary International" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="logo-placeholder">Rotary International</div>
                 </div>
             </div>
         </div>
