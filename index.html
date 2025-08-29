@@ -9,17 +9,17 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jtwu.com/">
+    <meta property="og:url" content="https://jtwu.org/">
     <meta property="og:title" content="Jonathan 'JT' Wu - Capital & Community. Strategy with Purpose.">
     <meta property="og:description" content="Civic-minded entrepreneur and strategic finance advisor bridging sectors for transformative impact.">
-    <meta property="og:image" content="https://jtwu.com/jt-wu-og-image.jpg">
+    <meta property="og:image" content="https://jtwu.org/jt-wu-og-image.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://jtwu.com/">
+    <meta property="twitter:url" content="https://jtwu.org/">
     <meta property="twitter:title" content="Jonathan 'JT' Wu - Capital & Community. Strategy with Purpose.">
     <meta property="twitter:description" content="Civic-minded entrepreneur and strategic finance advisor bridging sectors for transformative impact.">
-    <meta property="twitter:image" content="https://jtwu.com/jt-wu-og-image.jpg">
+    <meta property="twitter:image" content="https://jtwu.org/jt-wu-og-image.jpg">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -29,7 +29,7 @@
       "name": "Jonathan Wu",
       "alternateName": "JT Wu",
       "description": "Civic-minded entrepreneur and strategic finance advisor",
-      "url": "https://jtwu.com",
+      "url": "https://jtwu.org",
       "jobTitle": "Founder & Strategic Advisor",
       "worksFor": {
         "@type": "Organization",
@@ -66,12 +66,12 @@
         }
         
         :root {
-            --navy: #2c3e50;  /* Darker slate-blue from mockup */
-            --slate: #5a6c7d; /* Softer slate-gray */
-            --princeton-orange: #e67e22; /* Warmer orange accent */
+            --navy: #2c3e50;
+            --slate: #5a6c7d;
+            --princeton-orange: #e67e22;
             --warm-gold: #d4a574;
-            --light-gray: #f8f9fa; /* Cleaner light background */
-            --accent-teal: #3498db; /* Subtle blue accent */
+            --light-gray: #f8f9fa;
+            --accent-teal: #3498db;
             --white: #ffffff;
         }
         
@@ -86,7 +86,7 @@
             font-family: 'Playfair Display', serif;
             color: var(--navy);
         }
-        
+
         /* Navigation */
         nav {
             position: fixed;
@@ -136,7 +136,7 @@
             outline: 2px solid var(--princeton-orange);
             outline-offset: 2px;
         }
-        
+
         /* Mobile Menu */
         .mobile-menu-toggle {
             display: none;
@@ -164,14 +164,9 @@
             transition: all 0.3s ease;
         }
         
-        .hamburger::before {
-            top: -8px;
-        }
-        
-        .hamburger::after {
-            top: 8px;
-        }
-        
+        .hamburger::before { top: -8px; }
+        .hamburger::after { top: 8px; }
+
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -205,12 +200,13 @@
             padding: 0 2rem;
             z-index: 1;
             position: relative;
+            text-align: center;
         }
         
         .tagline {
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 700;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             background: linear-gradient(135deg, var(--navy) 0%, var(--princeton-orange) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -229,23 +225,24 @@
         }
         
         .intro-blurb {
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             color: var(--slate);
-            max-width: 700px;
-            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
             line-height: 1.8;
             animation: fadeInUp 1s ease 0.2s both;
         }
         
         .cta-buttons {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
+            justify-content: center;
             flex-wrap: wrap;
             animation: fadeInUp 1s ease 0.4s both;
         }
         
         .btn {
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem;
             text-decoration: none;
             font-weight: 600;
             border-radius: 50px;
@@ -253,21 +250,21 @@
             display: inline-block;
             cursor: pointer;
             border: none;
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
         
         .btn-primary {
             background: var(--princeton-orange);
             color: white;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
         }
         
         .btn-primary:hover,
         .btn-primary:focus {
-            background: #ff5722;
+            background: #d35400;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
-            outline: 2px solid #ff5722;
+            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+            outline: 2px solid #d35400;
             outline-offset: 2px;
         }
         
@@ -285,10 +282,11 @@
             outline: 2px solid var(--navy);
             outline-offset: 2px;
         }
-        
-        /* Sections */
-        section {
+
+        /* Quick Intro Section */
+        .quick-intro {
             padding: 5rem 0;
+            background: white;
         }
         
         .container {
@@ -297,374 +295,62 @@
             padding: 0 2rem;
         }
         
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--navy);
-        }
-        
-        .section-subtitle {
-            font-size: 1.25rem;
-            color: var(--princeton-orange);
-            margin-bottom: 3rem;
-            font-weight: 600;
-        }
-        
-        /* About Section */
-        .about {
-            background: white;
-            padding: 6rem 0;
-        }
-        
-        .about-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .professional-title {
-            font-size: 2.2rem;
-            color: var(--navy);
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            margin: 0;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-        
-        .about-text {
-            padding-right: 2rem;
-        }
-        
-        .about-text p {
-            margin-bottom: 1.5rem;
-            font-size: 1.05rem;
-            line-height: 1.7;
-            color: var(--slate);
-            text-align: justify;
-        }
-        
-        .bio-intro {
-            font-size: 1.15rem !important;
-            font-weight: 500;
-            color: var(--navy) !important;
-        }
-        
-        .about-sidebar {
-            background: var(--light-gray);
-            padding: 2rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--princeton-orange);
-        }
-        
-        .professional-photo {
-            margin-bottom: 2rem;
-        }
-        
-        .photo-placeholder {
-            background: var(--slate);
-            color: white;
-            padding: 3rem 1rem;
-            text-align: center;
-            border-radius: 8px;
-            font-weight: 500;
-        }
-        
-        .contact-info h4 {
-            color: var(--navy);
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-        
-        .contact-info p {
-            margin-bottom: 0.8rem;
-            font-size: 0.95rem;
-            line-height: 1.4;
-        }
-        
-        /* Organizations Section */
-        .organizations {
-            background: var(--light-gray);
-            padding: 5rem 0;
-        }
-        
-        .organizations .section-title {
-            text-align: center;
-            margin-bottom: 4rem;
-            font-size: 2.5rem;
-        }
-        
-        .organizations-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            align-items: center;
-        }
-        
-        .org-logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border-radius: 8px;
-            min-height: 120px;
-        }
-        
-        .org-logo img {
-            max-height: 60px;
-            max-width: 100%;
-            width: auto;
-            height: auto;
-            filter: grayscale(100%) opacity(0.7);
-            transition: all 0.3s ease;
-        }
-        
-        .org-logo:hover img {
-            filter: grayscale(0%) opacity(1);
-            transform: scale(1.05);
-        }
-        
-        .org-logo:hover {
-            background: white;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transform: translateY(-5px);
-        }
-        
-        .logo-placeholder {
-            display: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--slate);
-            text-align: center;
-            padding: 1rem;
-            background: white;
-            border: 2px dashed var(--slate);
-            border-radius: 8px;
-            opacity: 0.7;
-            transition: all 0.3s ease;
-        }
-        
-        .org-logo:hover .logo-placeholder {
-            color: var(--princeton-orange);
-            border-color: var(--princeton-orange);
-            opacity: 1;
-        }
-        
-        .about-image {
-            position: relative;
-        }
-        
-        .image-placeholder {
-            width: 100%;
-            height: 500px;
-            background: linear-gradient(135deg, var(--light-gray) 0%, var(--slate) 100%);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.25rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .image-placeholder::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-            animation: shine 3s infinite;
-        }
-        
-        @keyframes shine {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        /* Advisory Work */
-        .advisory {
-            background: var(--light-gray);
-        }
-        
-        .capabilities-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .capability-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
-        
-        .capability-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        
-        .capability-card h4 {
-            color: var(--navy);
-            margin-bottom: 1rem;
-        }
-        
-        /* Civic Leadership */
-        .civic {
-            background: white;
-        }
-        
-        .highlights-list {
-            list-style: none;
-            margin: 2rem 0;
-        }
-        
-        .highlights-list li {
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-        }
-        
-        .highlights-list li::before {
-            content: '→';
-            color: var(--princeton-orange);
-            font-weight: bold;
-            margin-right: 1rem;
-            font-size: 1.25rem;
-        }
-        
-        .quote-block {
-            background: var(--light-gray);
-            padding: 2rem;
-            border-left: 4px solid var(--princeton-orange);
-            margin: 2rem 0;
-            font-style: italic;
-            font-size: 1.25rem;
-            color: var(--navy);
-        }
-        
-        /* Ventures */
-        .ventures {
-            background: var(--light-gray);
-        }
-        
-        .venture-grid {
+        .intro-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            gap: 3rem;
             margin-top: 3rem;
         }
         
-        .venture-card {
-            background: white;
+        .intro-card {
+            text-align: center;
             padding: 2rem;
             border-radius: 10px;
             transition: all 0.3s ease;
-            border: 2px solid transparent;
         }
         
-        .venture-card:hover {
-            border-color: var(--princeton-orange);
+        .intro-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
-        .venture-card h3 {
-            color: var(--navy);
+        .intro-card h3 {
             margin-bottom: 1rem;
+            color: var(--navy);
+            font-size: 1.5rem;
         }
         
-        .venture-card p {
+        .intro-card p {
             color: var(--slate);
             line-height: 1.6;
         }
-        
-        /* Speaking & Media */
-        .speaking {
-            background: white;
-        }
-        
-        /* Contact */
-        .contact {
+
+        /* Footer */
+        footer {
             background: var(--navy);
             color: white;
+            text-align: center;
+            padding: 3rem 0;
         }
         
-        .contact .section-title {
-            color: white;
-        }
-        
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
-        .social-links {
+        .footer-links {
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin-top: 3rem;
+            margin-bottom: 2rem;
         }
         
-        .social-links a {
+        .footer-links a {
             color: white;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
         }
         
-        .social-links a:hover {
+        .footer-links a:hover {
             color: var(--princeton-orange);
         }
-        
-        /* Footer */
-        footer {
-            background: var(--navy);
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .mobile-menu-toggle {
@@ -688,27 +374,25 @@
             }
             
             .tagline {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
             
             .intro-blurb {
-                font-size: 1.1rem;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
+                font-size: 1.2rem;
             }
             
             .cta-buttons {
                 flex-direction: column;
+                align-items: center;
             }
             
             .btn {
                 width: 100%;
+                max-width: 300px;
                 text-align: center;
             }
         }
-        
+
         /* Scroll animations */
         .fade-in {
             opacity: 0;
@@ -720,23 +404,11 @@
             opacity: 1;
             transform: translateY(0);
         }
-        
-        /* Performance optimizations */
-        .capability-card,
-        .venture-card {
-            will-change: transform;
-        }
-        
-        /* Improved focus indicators */
+
+        /* Focus indicators */
         *:focus {
             outline: 2px solid var(--princeton-orange);
             outline-offset: 2px;
-        }
-        
-        input:focus,
-        textarea:focus {
-            outline: 2px solid var(--princeton-orange);
-            outline-offset: -2px;
         }
         
         /* Loading states */
@@ -761,13 +433,10 @@
                 <div class="hamburger"></div>
             </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#advisory">Advisory</a></li>
-                <li><a href="#civic">Civic Leadership</a></li>
-                <li><a href="#ventures">Ventures</a></li>
-                <li><a href="#speaking">Speaking</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="advisory.html">Advisory</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -782,260 +451,44 @@
                 JT brings a rare blend of public service and private-sector acumen to every endeavor.
             </p>
             <div class="cta-buttons">
-                <a href="#contact" class="btn btn-primary">Let's Work Together</a>
-                <a href="#ventures" class="btn btn-secondary">Explore Ventures</a>
-                <a href="#about" class="btn btn-secondary">View CV</a>
+                <a href="about.html" class="btn btn-primary">Learn More About JT</a>
+                <a href="advisory.html" class="btn btn-secondary">Advisory Services</a>
+                <a href="contact.html" class="btn btn-secondary">Let's Connect</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
+    <!-- Quick Intro Section -->
+    <section class="quick-intro">
         <div class="container">
-            <div class="about-header fade-in">
-                <h2 class="professional-title">Jonathan "JT" Wu | Strategic Advisor & Civic Leader</h2>
-            </div>
-            
-            <div class="about-content fade-in">
-                <div class="about-text">
-                    <p class="bio-intro">
-                        Jonathan "JT" Wu is a seasoned strategic finance advisor and civic entrepreneur with deep expertise in 
-                        mergers & acquisitions, corporate strategy, and cross-sector leadership. As Chairman of Georgia's largest public 
-                        library system and founder of nationally recognized organizations, JT brings a distinguished blend of private-sector 
-                        acumen and public service to every engagement.
-                    </p>
-                    <p>
-                        Beyond the private sector, JT is a recognized leader in public-private partnerships and civic innovation. 
-                        He serves as Chairman of the Gwinnett County Public Library System, where he has delivered transformational 
-                        growth and operational excellence. He is also the Founder and Executive Director of <strong>Preface</strong>, 
-                        a nationally recognized early childhood literacy nonprofit, and previously liaised with the U.S. State Department 
-                        on diplomatic and international development initiatives.
-                    </p>
-                    <p>
-                        A sought-after speaker and thought leader, JT has been featured in national publications and recognized 
-                        as one of Georgia's most influential civic leaders. He received his A.B. cum laude in Public and International 
-                        Affairs from Princeton University and maintains active involvement in professional and philanthropic organizations 
-                        across the Southeast.
-                    </p>
+            <div class="intro-grid fade-in">
+                <div class="intro-card">
+                    <h3>Strategic Finance</h3>
+                    <p>Expert guidance on M&A transactions, capital raises, and corporate strategy through Magnolia Prospect advisory services.</p>
                 </div>
-                <div class="about-sidebar">
-                    <div class="professional-photo">
-                        <img src="jt-wu-professional.jpg" alt="Jonathan JT Wu - Professional headshot" style="width: 100%; height: auto; border-radius: 8px; display: none;" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\"photo-placeholder\">[Professional Photo]</div>';">
-                        <div class="photo-placeholder">[Professional Photo]</div>
-                    </div>
-                    <div class="contact-info">
-                        <h4>Contact Information</h4>
-                        <p><strong>Email:</strong> jt@jtwu.org</p>
-                        <p><strong>LinkedIn:</strong> linkedin.com/in/jtwu</p>
-                        <p><strong>Based:</strong> Atlanta, Georgia</p>
-                    </div>
+                <div class="intro-card">
+                    <h3>Civic Leadership</h3>
+                    <p>Chairman of Georgia's largest public library system and founder of nationally recognized literacy nonprofit Preface.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Organizations Section -->
-    <section class="organizations" id="organizations">
-        <div class="container">
-            <h2 class="section-title fade-in">Trusted by Leading Organizations</h2>
-            <div class="organizations-grid fade-in">
-                <div class="org-logo" data-org="preface">
-                    <img src="logos/preface-logo.svg" alt="Preface" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <div class="logo-placeholder">Preface</div>
+                <div class="intro-card">
+                    <h3>Cross-Sector Impact</h3>
+                    <p>Bridging private sector expertise with public service to create meaningful change in communities and organizations.</p>
                 </div>
-                <div class="org-logo" data-org="gcpl">
-                    <img src="logos/gwinnett-library-logo.svg" alt="Gwinnett County Public Library" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <div class="logo-placeholder">Gwinnett County Public Library</div>
-                </div>
-                <div class="org-logo" data-org="princeton">
-                    <img src="logos/princeton-logo.svg" alt="Princeton University" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <div class="logo-placeholder">Princeton University</div>
-                </div>
-                <div class="org-logo" data-org="chamber">
-                    <img src="logos/gwinnett-chamber-logo.svg" alt="Gwinnett Chamber of Commerce" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <div class="logo-placeholder">Gwinnett Chamber</div>
-                </div>
-                <div class="org-logo" data-org="state-dept">
-                    <img src="logos/state-department-logo.svg" alt="U.S. Department of State" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <div class="logo-placeholder">U.S. State Department</div>
-                </div>
-                <div class="org-logo" data-org="asset-roofing">
-                    <img src="logos/asset-roofing-logo.svg" alt="Asset Roofing" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <div class="logo-placeholder">Asset Roofing</div>
-                </div>
-                <div class="org-logo" data-org="emerging-voters">
-                    <img src="logos/emerging-voters-logo.svg" alt="Emerging Voters" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <div class="logo-placeholder">Emerging Voters</div>
-                </div>
-                <div class="org-logo" data-org="rotary">
-                    <img src="logos/rotary-logo.svg" alt="Rotary International" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <div class="logo-placeholder">Rotary International</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Advisory Work Section -->
-    <section class="advisory" id="advisory">
-        <div class="container">
-            <h2 class="section-title fade-in">Advisory Work</h2>
-            <p class="section-subtitle fade-in">Magnolia Prospect: White-Glove Advisory for Founders & Families</p>
-            
-            <p class="fade-in" style="font-size: 1.1rem; margin-bottom: 2rem;">
-                JT is the founder of Magnolia Prospect, a boutique advisory platform helping business owners, 
-                family offices, and civic institutions plan for growth, transitions, and meaningful exits.
-            </p>
-            
-            <div class="capabilities-grid fade-in">
-                <div class="capability-card">
-                    <h4>Strategic Finance & Capital Raises</h4>
-                    <p>Expert guidance on funding strategies and capital structure optimization</p>
-                </div>
-                <div class="capability-card">
-                    <h4>Sell-Side M&A and Roll-Up Execution</h4>
-                    <p>Comprehensive transaction support from strategy to closing</p>
-                </div>
-                <div class="capability-card">
-                    <h4>Fractional CFO & Business Development</h4>
-                    <p>Strategic financial leadership and growth acceleration</p>
-                </div>
-                <div class="capability-card">
-                    <h4>Financial Modeling & Valuation</h4>
-                    <p>Sophisticated analysis for informed decision-making</p>
-                </div>
-                <div class="capability-card">
-                    <h4>Turnaround Management</h4>
-                    <p>Crisis navigation and operational restructuring</p>
-                </div>
-                <div class="capability-card">
-                    <h4>Stakeholder Communication</h4>
-                    <p>Policy navigation and strategic messaging</p>
-                </div>
-            </div>
-            
-            <div class="fade-in" style="margin-top: 3rem;">
-                <h3 style="color: var(--navy); margin-bottom: 1rem;">Sample Clients:</h3>
-                <ul style="list-style: none;">
-                    <li style="padding: 0.5rem 0;">• High Ground Title (Roll-up CFO & Sponsor)</li>
-                    <li style="padding: 0.5rem 0;">• Artisse (Crypto/AI Venture Structuring)</li>
-                    <li style="padding: 0.5rem 0;">• CTSP Holdings (Multisector Portfolio)</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Civic Leadership Section -->
-    <section class="civic" id="civic">
-        <div class="container">
-            <h2 class="section-title fade-in">Civic Leadership</h2>
-            <p class="section-subtitle fade-in">Mission Meets Movement</p>
-            
-            <ul class="highlights-list fade-in">
-                <li>Founder, Preface – National nonprofit for youth-led literacy (www.prefaceproject.org)</li>
-                <li>Chairman, Gwinnett County Public Library System (Georgia's largest)</li>
-                <li>Board Member, Gwinnett Chamber of Commerce</li>
-                <li>Public Testimony & Advocacy on Education and Innovation</li>
-            </ul>
-            
-            <div class="quote-block fade-in">
-                "We measure success not just in dollars, but in lives touched and futures changed."
-            </div>
-        </div>
-    </section>
-
-    <!-- Ventures Section -->
-    <section class="ventures" id="ventures">
-        <div class="container">
-            <h2 class="section-title fade-in">Ventures & Initiatives</h2>
-            <p class="section-subtitle fade-in">Ventures at the Vanguard</p>
-            
-            <div class="venture-grid fade-in">
-                <div class="venture-card">
-                    <h3>Asian American Voices Media (AAVM)</h3>
-                    <p>Multilingual news infrastructure to counter disinformation and empower civic participation</p>
-                </div>
-                <div class="venture-card">
-                    <h3>Korean & Chinese American Voices</h3>
-                    <p>Flagship content brands under AAVM, delivering culturally relevant news and insights</p>
-                </div>
-                <div class="venture-card">
-                    <h3>Digital News Digest AI Pipelines</h3>
-                    <p>NLP + translation + synthesis models powering real-time civic media</p>
-                </div>
-                <div class="venture-card">
-                    <h3>Advanced Textiles Play</h3>
-                    <p>Exploring sustainable supply chain and industrial acquisition opportunities in Greenville, SC</p>
-                </div>
-                <div class="venture-card">
-                    <h3>Political Risk Advisory Concept</h3>
-                    <p>Future consulting arm for global FDI, public-private strategy, and sovereign clients</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Speaking & Media Section -->
-    <section class="speaking" id="speaking">
-        <div class="container">
-            <h2 class="section-title fade-in">Speaking & Media</h2>
-            <p class="section-subtitle fade-in">Thought Leadership & Public Voice</p>
-            
-            <div class="fade-in">
-                <h3 style="color: var(--navy); margin-bottom: 1.5rem;">Opportunities:</h3>
-                <ul class="highlights-list">
-                    <li>Keynotes on civic innovation, cross-sector strategy, and literacy</li>
-                    <li>Legislative testimony and policy briefings</li>
-                    <li>Media features and TED-style talks (in progress)</li>
-                    <li>Substack: Margin Notes with JT Wu (coming soon)</li>
-                </ul>
-                
-                <div class="cta-buttons" style="margin-top: 2rem;">
-                    <a href="#contact" class="btn btn-primary">Book JT to Speak</a>
-                    <a href="#" class="btn btn-secondary">View Media Kit</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title fade-in">Let's Connect</h2>
-            <p class="fade-in" style="text-align: center; margin-bottom: 3rem;">
-                Whether you're a business owner, funder, journalist, or policymaker, JT welcomes meaningful collaborations.
-            </p>
-            
-            <form class="contact-form fade-in">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="organization">Organization / Affiliation</label>
-                    <input type="text" id="organization" name="organization">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-            </form>
-            
-            <div class="social-links fade-in">
-                <a href="https://linkedin.com/in/jtwu" target="_blank">LinkedIn</a>
-                <a href="https://twitter.com/jtwugeorgia" target="_blank">Twitter / X</a>
-                <a href="#" target="_blank">Substack</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Jonathan "JT" Wu. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="advisory.html">Advisory Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="https://linkedin.com/in/jtwu" target="_blank">LinkedIn</a>
+            </div>
+            <p>&copy; 2025 Jonathan "JT" Wu. All rights reserved.</p>
+        </div>
     </footer>
 
     <script>
@@ -1044,22 +497,6 @@
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
         }
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // Close mobile menu if open
-                    document.getElementById('navLinks').classList.remove('active');
-                }
-            });
-        });
 
         // Intersection Observer for fade-in animations
         const observerOptions = {
@@ -1094,45 +531,6 @@
             }
             
             lastScroll = currentScroll;
-        });
-
-        // Enhanced form submission handler with validation
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            
-            // Basic validation
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
-            
-            if (!name || !email || !message) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-            
-            // Show loading state
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            
-            // Simulate form submission (replace with actual form handler)
-            setTimeout(() => {
-                alert('Thank you for your message! JT will be in touch soon.');
-                this.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }, 1000);
-            
-            // For production, replace the setTimeout with actual form submission:
-            // fetch('/api/contact', {
-            //     method: 'POST',
-            //     body: formData
-            // }).then(response => {
-            //     // handle response
-            // });
         });
     </script>
 </body>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Jonathan "JT" Wu - Strategic Finance Advisor & Civic Leader</title>
+    <meta name="description" content="Learn about JT Wu's background as Chairman of Georgia's largest public library system, founder of Preface, and seasoned M&A professional with Princeton education.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --navy: #2c3e50;
+            --slate: #5a6c7d;
+            --princeton-orange: #e67e22;
+            --warm-gold: #d4a574;
+            --light-gray: #f8f9fa;
+            --accent-teal: #3498db;
+            --white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--slate);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--navy);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--slate);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--princeton-orange);
+        }
+
+        .nav-links a.active {
+            color: var(--princeton-orange);
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        main {
+            padding-top: 90px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Professional Header */
+        .professional-header {
+            padding: 4rem 0;
+            background: var(--light-gray);
+            text-align: center;
+        }
+
+        .professional-title {
+            font-size: 2.8rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .professional-subtitle {
+            font-size: 1.3rem;
+            color: var(--princeton-orange);
+            font-weight: 600;
+        }
+
+        /* Bio Section */
+        .bio-section {
+            padding: 6rem 0;
+            background: white;
+        }
+        
+        .bio-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .bio-text {
+            padding-right: 2rem;
+        }
+        
+        .bio-text p {
+            margin-bottom: 1.8rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--slate);
+            text-align: justify;
+        }
+        
+        .bio-intro {
+            font-size: 1.25rem !important;
+            font-weight: 600;
+            color: var(--navy) !important;
+        }
+        
+        .bio-sidebar {
+            background: var(--light-gray);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--princeton-orange);
+            position: sticky;
+            top: 120px;
+        }
+        
+        .professional-photo {
+            margin-bottom: 2rem;
+        }
+        
+        .photo-placeholder {
+            background: var(--slate);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .contact-info h4 {
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            border-bottom: 2px solid var(--princeton-orange);
+            padding-bottom: 0.5rem;
+        }
+        
+        .contact-info p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .contact-info strong {
+            color: var(--navy);
+        }
+
+        /* Organizations Section */
+        .organizations-section {
+            padding: 6rem 0;
+            background: var(--light-gray);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 4rem;
+            color: var(--navy);
+        }
+        
+        .organizations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        
+        .org-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-radius: 12px;
+            min-height: 140px;
+            background: rgba(255, 255, 255, 0.7);
+        }
+        
+        .org-logo img {
+            max-height: 70px;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            filter: grayscale(100%) opacity(0.7);
+            transition: all 0.3s ease;
+        }
+        
+        .org-logo:hover img {
+            filter: grayscale(0%) opacity(1);
+            transform: scale(1.08);
+        }
+        
+        .org-logo:hover {
+            background: white;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+        }
+        
+        .logo-placeholder {
+            display: none;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--slate);
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border: 2px dashed var(--slate);
+            border-radius: 8px;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+        
+        .org-logo:hover .logo-placeholder {
+            color: var(--princeton-orange);
+            border-color: var(--princeton-orange);
+            opacity: 1;
+        }
+
+        /* Civic Leadership Section */
+        .civic-section {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .civic-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .civic-card {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--princeton-orange);
+            transition: all 0.3s ease;
+        }
+
+        .civic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .civic-card h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            color: var(--navy);
+        }
+
+        .civic-card p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--slate);
+        }
+
+        .quote-section {
+            padding: 4rem 0;
+            background: var(--navy);
+            color: white;
+            text-align: center;
+        }
+
+        .quote-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quote-text {
+            font-size: 1.8rem;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .quote-attribution {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--princeton-orange);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--princeton-orange);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .professional-title {
+                font-size: 2.2rem;
+            }
+
+            .bio-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .bio-text {
+                padding-right: 0;
+            }
+
+            .bio-sidebar {
+                position: static;
+            }
+
+            .civic-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .organizations-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 2rem;
+            }
+
+            .quote-text {
+                font-size: 1.4rem;
+            }
+        }
+
+        /* Focus states */
+        *:focus {
+            outline: 2px solid var(--princeton-orange);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">JT Wu</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="advisory.html">Advisory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Professional Header -->
+        <section class="professional-header">
+            <div class="container">
+                <h1 class="professional-title">Jonathan "JT" Wu</h1>
+                <p class="professional-subtitle">Strategic Finance Advisor & Civic Leader</p>
+            </div>
+        </section>
+
+        <!-- Bio Section -->
+        <section class="bio-section">
+            <div class="container">
+                <div class="bio-content">
+                    <div class="bio-text">
+                        <p class="bio-intro">
+                            Jonathan "JT" Wu is a seasoned strategic finance advisor and civic entrepreneur with deep expertise in 
+                            mergers & acquisitions, corporate strategy, and cross-sector leadership. As Chairman of Georgia's largest public 
+                            library system and founder of nationally recognized organizations, JT brings a distinguished blend of private-sector 
+                            acumen and public service to every engagement.
+                        </p>
+                        <p>
+                            Through his advisory firm Magnolia Prospect, JT provides white-glove strategic finance services to business owners, 
+                            family offices, and civic institutions. His expertise spans sell-side M&A execution, capital raises, fractional CFO services, 
+                            and complex transaction structuring. He has successfully guided clients through hundreds of millions in transaction value, 
+                            combining sophisticated financial modeling with stakeholder communication excellence.
+                        </p>
+                        <p>
+                            Beyond the private sector, JT is a recognized leader in public-private partnerships and civic innovation. 
+                            He serves as Chairman of the Gwinnett County Public Library System, where he has delivered transformational 
+                            growth and a 10x return on public investment. He is also the Founder and Executive Director of <strong>Preface</strong>, 
+                            a nationally recognized early childhood literacy nonprofit that has trained thousands of high school ambassadors 
+                            to mentor young students through a proprietary multilingual platform.
+                        </p>
+                        <p>
+                            JT's civic leadership extends to board positions with the Gwinnett Chamber of Commerce and previous liaison work 
+                            with the U.S. State Department on international development initiatives. He has provided testimony on education 
+                            innovation and economic development, and previously founded Emerging Voters, a nonpartisan voter engagement organization 
+                            focused on diverse communities.
+                        </p>
+                        <p>
+                            A sought-after speaker and thought leader, JT has been featured in national publications and recognized 
+                            as one of Georgia's most influential civic leaders. He received his A.B. cum laude in Public and International 
+                            Affairs from Princeton University, where he was a varsity coxswain on the heavyweight rowing team. He maintains 
+                            active involvement in professional and philanthropic organizations across the Southeast.
+                        </p>
+                    </div>
+                    <div class="bio-sidebar">
+                        <div class="professional-photo">
+                            <img src="jt-wu-professional.jpg" alt="Jonathan JT Wu - Professional headshot" style="width: 100%; height: auto; border-radius: 8px; display: none;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="photo-placeholder">Professional Photo</div>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Contact Information</h4>
+                            <p><strong>Email:</strong> jt@jtwu.org</p>
+                            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/jtwu" target="_blank" style="color: var(--princeton-orange);">linkedin.com/in/jtwu</a></p>
+                            <p><strong>Based:</strong> Atlanta, Georgia</p>
+                            <p><strong>Education:</strong> Princeton University, A.B.</p>
+                            <p><strong>Specialties:</strong> M&A, Strategic Finance, Civic Leadership</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Organizations Section -->
+        <section class="organizations-section">
+            <div class="container">
+                <h2 class="section-title">Trusted by Leading Organizations</h2>
+                <div class="organizations-grid">
+                    <div class="org-logo" data-org="preface">
+                        <img src="logos/preface-logo.svg" alt="Preface" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="logo-placeholder">Preface</div>
+                    </div>
+                    <div class="org-logo" data-org="gcpl">
+                        <img src="logos/gwinnett-library-logo.svg" alt="Gwinnett County Public Library" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="logo-placeholder">Gwinnett County<br>Public Library</div>
+                    </div>
+                    <div class="org-logo" data-org="princeton">
+                        <img src="logos/princeton-logo.svg" alt="Princeton University" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="logo-placeholder">Princeton University</div>
+                    </div>
+                    <div class="org-logo" data-org="chamber">
+                        <img src="logos/gwinnett-chamber-logo.svg" alt="Gwinnett Chamber of Commerce" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="logo-placeholder">Gwinnett Chamber</div>
+                    </div>
+                    <div class="org-logo" data-org="state-dept">
+                        <img src="logos/state-department-logo.svg" alt="U.S. Department of State" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="logo-placeholder">U.S. State Department</div>
+                    </div>
+                    <div class="org-logo" data-org="asset-roofing">
+                        <img src="logos/asset-roofing-logo.svg" alt="Asset Roofing" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="logo-placeholder">Asset Roofing</div>
+                    </div>
+                    <div class="org-logo" data-org="emerging-voters">
+                        <img src="logos/emerging-voters-logo.svg" alt="Emerging Voters" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="logo-placeholder">Emerging Voters</div>
+                    </div>
+                    <div class="org-logo" data-org="rotary">
+                        <img src="logos/rotary-logo.svg" alt="Rotary International" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="logo-placeholder">Rotary International</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Civic Leadership Section -->
+        <section class="civic-section">
+            <div class="container">
+                <h2 class="section-title">Civic Leadership & Impact</h2>
+                <div class="civic-content">
+                    <div class="civic-card">
+                        <h3>Public Service</h3>
+                        <p>Chairman of the Gwinnett County Public Library System, Georgia's largest, delivering a 10x return on public investment through strategic leadership and innovative programming that serves over one million residents.</p>
+                    </div>
+                    <div class="civic-card">
+                        <h3>Education Innovation</h3>
+                        <p>Founder of Preface, a nationally recognized nonprofit that has trained thousands of high school ambassadors to provide multilingual literacy mentorship, bridging educational gaps in diverse communities.</p>
+                    </div>
+                    <div class="civic-card">
+                        <h3>Economic Development</h3>
+                        <p>Board member of the Gwinnett Chamber of Commerce, advocating for policies that support business growth while maintaining community values and sustainable development practices.</p>
+                    </div>
+                    <div class="civic-card">
+                        <h3>Civic Engagement</h3>
+                        <p>Previously founded Emerging Voters, a nonpartisan organization focused on increasing political participation among diverse communities, and provided liaison support for international development initiatives.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="quote-section">
+            <div class="container">
+                <div class="quote-content">
+                    <p class="quote-text">"We measure success not just in dollars, but in lives touched and futures changed."</p>
+                    <p class="quote-attribution">— Jonathan "JT" Wu</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="advisory.html">Advisory Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="https://linkedin.com/in/jtwu" target="_blank">LinkedIn</a>
+            </div>
+            <p>&copy; 2025 Jonathan "JT" Wu. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
