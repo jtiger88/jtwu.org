@@ -16,25 +16,30 @@
         }
         
         :root {
-            --navy: #2c3e50;
-            --slate: #5a6c7d;
-            --princeton-orange: #e67e22;
-            --warm-gold: #d4a574;
-            --light-gray: #f8f9fa;
-            --accent-teal: #3498db;
+            --magnolia-cream: #faf8f5;
+            --warm-gold: #c9a876;
+            --sage-green: #8a9a8b;
+            --dark-sage: #5d6b5e;
+            --charcoal: #3a3d3a;
+            --soft-gray: #f5f3f0;
+            --accent-gold: #b8965d;
+            --text-primary: #2d2f2d;
+            --text-secondary: #5d6b5e;
             --white: #ffffff;
+            --subtle-border: rgba(138, 154, 139, 0.2);
         }
         
         body {
             font-family: 'Inter', sans-serif;
-            color: var(--slate);
+            color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
+            background: var(--magnolia-cream);
         }
         
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-            color: var(--navy);
+            color: var(--text-primary);
         }
 
         /* Navigation */
@@ -42,11 +47,12 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(15px);
             z-index: 1000;
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 1.2rem 0;
+            border-bottom: 1px solid var(--subtle-border);
+            transition: all 0.3s ease;
         }
         
         .nav-container {
@@ -60,10 +66,11 @@
         
         .logo {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--navy);
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--text-primary);
             text-decoration: none;
+            letter-spacing: 1px;
         }
         
         .nav-links {
@@ -74,20 +81,27 @@
         
         .nav-links a {
             text-decoration: none;
-            color: var(--slate);
-            font-weight: 500;
-            transition: color 0.3s ease;
+            color: var(--text-secondary);
+            font-weight: 400;
+            transition: all 0.3s ease;
             font-size: 0.95rem;
+            letter-spacing: 0.5px;
         }
         
         .nav-links a:hover,
         .nav-links a:focus {
-            color: var(--princeton-orange);
+            color: var(--accent-gold);
+            outline: none;
+        }
+        
+        .nav-links a:focus {
+            outline: 1px solid var(--accent-gold);
+            outline-offset: 2px;
         }
 
         .nav-links a.active {
-            color: var(--princeton-orange);
-            font-weight: 600;
+            color: var(--accent-gold);
+            font-weight: 500;
         }
 
         /* Main Content */
@@ -104,21 +118,23 @@
         /* Professional Header */
         .professional-header {
             padding: 4rem 0;
-            background: var(--light-gray);
+            background: var(--soft-gray);
             text-align: center;
+            border-bottom: 1px solid var(--subtle-border);
         }
 
         .professional-title {
             font-size: 2.8rem;
-            color: var(--navy);
+            color: var(--text-primary);
             margin-bottom: 1rem;
             font-weight: 400;
         }
 
         .professional-subtitle {
             font-size: 1.3rem;
-            color: var(--princeton-orange);
-            font-weight: 600;
+            color: var(--accent-gold);
+            font-weight: 500;
+            letter-spacing: 1px;
         }
 
         /* Bio Section */
@@ -142,21 +158,21 @@
             margin-bottom: 1.8rem;
             font-size: 1.1rem;
             line-height: 1.8;
-            color: var(--slate);
+            color: var(--text-secondary);
             text-align: justify;
         }
         
         .bio-intro {
             font-size: 1.25rem !important;
             font-weight: 600;
-            color: var(--navy) !important;
+            color: var(--text-primary) !important;
         }
         
         .bio-sidebar {
-            background: var(--light-gray);
+            background: var(--soft-gray);
             padding: 2.5rem;
             border-radius: 12px;
-            border-left: 4px solid var(--princeton-orange);
+            border-left: 4px solid var(--accent-gold);
             position: sticky;
             top: 120px;
         }
@@ -166,7 +182,7 @@
         }
         
         .photo-placeholder {
-            background: var(--slate);
+            background: var(--sage-green);
             color: white;
             padding: 4rem 1rem;
             text-align: center;
@@ -176,10 +192,10 @@
         }
         
         .contact-info h4 {
-            color: var(--navy);
+            color: var(--text-primary);
             margin-bottom: 1.5rem;
             font-size: 1.2rem;
-            border-bottom: 2px solid var(--princeton-orange);
+            border-bottom: 2px solid var(--accent-gold);
             padding-bottom: 0.5rem;
         }
         
@@ -190,20 +206,21 @@
         }
 
         .contact-info strong {
-            color: var(--navy);
+            color: var(--text-primary);
         }
 
         /* Organizations Section */
         .organizations-section {
             padding: 6rem 0;
-            background: var(--light-gray);
+            background: var(--soft-gray);
+            border-top: 1px solid var(--subtle-border);
         }
         
         .section-title {
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 4rem;
-            color: var(--navy);
+            color: var(--text-primary);
         }
         
         .organizations-grid {
@@ -250,27 +267,28 @@
         .logo-placeholder {
             display: none;
             font-size: 0.95rem;
-            font-weight: 700;
-            color: var(--slate);
+            font-weight: 600;
+            color: var(--text-secondary);
             text-align: center;
             padding: 1.5rem;
             background: white;
-            border: 2px dashed var(--slate);
+            border: 2px dashed var(--subtle-border);
             border-radius: 8px;
             opacity: 0.8;
             transition: all 0.3s ease;
         }
         
         .org-logo:hover .logo-placeholder {
-            color: var(--princeton-orange);
-            border-color: var(--princeton-orange);
+            color: var(--accent-gold);
+            border-color: var(--accent-gold);
             opacity: 1;
         }
 
         /* Civic Leadership Section */
         .civic-section {
             padding: 6rem 0;
-            background: white;
+            background: var(--white);
+            border-top: 1px solid var(--subtle-border);
         }
 
         .civic-content {
@@ -281,35 +299,37 @@
         }
 
         .civic-card {
-            background: var(--light-gray);
+            background: var(--soft-gray);
             padding: 3rem;
             border-radius: 12px;
-            border-left: 4px solid var(--princeton-orange);
+            border-left: 4px solid var(--accent-gold);
             transition: all 0.3s ease;
         }
 
         .civic-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(138, 154, 139, 0.15);
+            background: var(--white);
         }
 
         .civic-card h3 {
             margin-bottom: 1.5rem;
             font-size: 1.8rem;
-            color: var(--navy);
+            color: var(--text-primary);
         }
 
         .civic-card p {
             font-size: 1.05rem;
             line-height: 1.7;
-            color: var(--slate);
+            color: var(--text-secondary);
         }
 
         .quote-section {
             padding: 4rem 0;
-            background: var(--navy);
-            color: white;
+            background: var(--charcoal);
+            color: var(--magnolia-cream);
             text-align: center;
+            border-top: 1px solid var(--subtle-border);
         }
 
         .quote-content {
@@ -328,15 +348,16 @@
         .quote-attribution {
             font-size: 1.1rem;
             font-weight: 600;
-            color: var(--princeton-orange);
+            color: var(--warm-gold);
         }
 
         /* Footer */
         footer {
-            background: var(--navy);
-            color: white;
+            background: var(--charcoal);
+            color: var(--magnolia-cream);
             text-align: center;
-            padding: 3rem 0;
+            padding: 4rem 0;
+            border-top: 1px solid var(--subtle-border);
         }
         
         .footer-links {
@@ -347,14 +368,18 @@
         }
         
         .footer-links a {
-            color: white;
+            color: var(--magnolia-cream);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 300;
             transition: color 0.3s ease;
+            opacity: 0.8;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
         }
         
         .footer-links a:hover {
-            color: var(--princeton-orange);
+            color: var(--warm-gold);
+            opacity: 1;
         }
 
         /* Responsive Design */
@@ -393,7 +418,7 @@
 
         /* Focus states */
         *:focus {
-            outline: 2px solid var(--princeton-orange);
+            outline: 2px solid var(--accent-gold);
             outline-offset: 2px;
         }
     </style>
@@ -466,7 +491,7 @@
                         <div class="contact-info">
                             <h4>Contact Information</h4>
                             <p><strong>Email:</strong> jt@jtwu.org</p>
-                            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/jtwu" target="_blank" style="color: var(--princeton-orange);">linkedin.com/in/jtwu</a></p>
+                            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/jtwu" target="_blank" style="color: var(--accent-gold);">linkedin.com/in/jtwu</a></p>
                             <p><strong>Based:</strong> Atlanta, Georgia</p>
                             <p><strong>Education:</strong> Princeton University, A.B.</p>
                             <p><strong>Specialties:</strong> M&A, Strategic Finance, Civic Leadership</p>
