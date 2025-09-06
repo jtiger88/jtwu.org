@@ -50,6 +50,14 @@ Professional website for Jonathan "JT" Wu, showcasing his work as a civic-minded
 - WCAG compliant accessibility with proper focus states
 - Current layout is approved and should be maintained
 
+## Recent Updates (Latest Session)
+**Mobile Navigation & Hero Section Consistency** - All pages now have uniform mobile experience:
+- **Mobile Navigation**: Standardized hamburger menu with proper alignment (`left: 0` on pseudo-elements), solid `var(--magnolia-cream)` background, backdrop-filter blur, rounded corners, and consistent font sizing across all pages
+- **Hero Section Spacing**: Fixed white bar gaps by updating hero padding to `8rem 0 5rem` for proper spacing below fixed navigation
+- **Mobile Typography**: Added missing `font-size: 2.2rem` to mobile hero titles on About page, removed font-size overrides from mobile nav links to match Home page behavior
+- **Animation Integration**: Successfully integrated magnolia leaf SVG patterns and fadeInUp animations across About, Advisory, and Contact pages to match homepage aesthetic
+- **Notion Integration**: Added Finance Sprint advisory offering section to Advisory page with tasteful callout styling
+
 ## Content Structure (per original brief)
 - Hero: "Capital & Community. Strategy with Purpose."
 - About: "Rooted in Georgia. Engaged Globally. Driven by Impact."
