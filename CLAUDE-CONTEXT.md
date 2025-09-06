@@ -57,6 +57,8 @@ Professional website for Jonathan "JT" Wu, showcasing his work as a civic-minded
 - **Mobile Typography**: Added missing `font-size: 2.2rem` to mobile hero titles on About page, removed font-size overrides from mobile nav links to match Home page behavior
 - **Animation Integration**: Successfully integrated magnolia leaf SVG patterns and fadeInUp animations across About, Advisory, and Contact pages to match homepage aesthetic
 - **Notion Integration**: Added Finance Sprint advisory offering section to Advisory page with tasteful callout styling
+- **Live Notion Link**: Connected Finance Sprint CTA button to live Notion page (https://striped-hammer-336.notion.site/Finance-Sprint-Unlock-What-s-Next-26697b8c04828057b527f33ee3275754) with target="_blank" for seamless user experience
+- **Brand Assets**: Created custom Notion header banner using correct brand fonts (Playfair Display for titles, Inter for body) and magnolia theme colors, saved as `finance-sprint-notion-banner.png` in Website Schema folder
 
 ## Content Structure (per original brief)
 - Hero: "Capital & Community. Strategy with Purpose."

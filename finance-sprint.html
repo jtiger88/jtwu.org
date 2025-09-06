@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Sprint: Unlock What's Next | JT Wu Strategic Advisory</title>
+    <meta name="description" content="Get unstuck, de-risked, and ready to raise, grow, or exit in just 10 business days. $5,000 flat fee. Founder-first advisory from JT Wu's Magnolia Prospect.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --magnolia-cream: #faf8f5;
+            --warm-gold: #c9a876;
+            --sage-green: #8a9a8b;
+            --dark-sage: #5d6b5e;
+            --charcoal: #3a3d3a;
+            --soft-gray: #f5f3f0;
+            --accent-gold: #b8965d;
+            --text-primary: #2d2f2d;
+            --text-secondary: #5d6b5e;
+            --white: #ffffff;
+            --subtle-border: rgba(138, 154, 139, 0.2);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: var(--magnolia-cream);
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--text-primary);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid var(--subtle-border);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 400;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--accent-gold);
+            outline: none;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .hamburger {
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: all 0.3s ease;
+            left: 0;
+        }
+        
+        .hamburger::before { top: -8px; }
+        .hamburger::after { top: 8px; }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 90px;
+                left: -100%;
+                width: 100%;
+                background: var(--magnolia-cream);
+                backdrop-filter: blur(15px);
+                border-radius: 0 0 12px 12px;
+                box-shadow: 0 8px 32px rgba(138, 154, 139, 0.15);
+                flex-direction: column;
+                padding: 2rem;
+                border-top: 1px solid var(--subtle-border);
+                transition: left 0.3s ease;
+                gap: 1rem;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+        }
+
+        /* Main Content */
+        main {
+            padding-top: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 8rem 0 5rem;
+            background: var(--magnolia-cream);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--subtle-border);
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(201, 168, 118, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(138, 154, 139, 0.06) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            height: 800px;
+            transform: translate(-50%, -50%) rotate(45deg);
+            background: url('data:image/svg+xml,<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="magnolia-sprint" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"><g opacity="0.12"><path d="M100,40 Q85,50 75,70 Q70,90 75,110 Q80,130 90,145 Q95,155 100,160 Q105,155 110,145 Q120,130 125,110 Q130,90 125,70 Q115,50 100,40" fill="%23c9a876" stroke="none"/><path d="M100,45 Q90,55 85,75 Q90,95 100,110 Q110,95 115,75 Q110,55 100,45" fill="none" stroke="%23faf8f5" stroke-width="0.6" opacity="0.4"/></g></pattern></defs><rect width="200" height="200" fill="url(%23magnolia-sprint)"/></svg>') repeat;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero-subtitle {
+            font-size: 0.95rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+            color: var(--text-primary);
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-title .emphasis {
+            color: var(--accent-gold);
+            font-style: italic;
+        }
+
+        .hero-pricing {
+            font-size: 1.4rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-weight: 400;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .decorative-line {
+            width: 80px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--accent-gold), transparent);
+            margin: 3rem auto;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+            font-weight: 300;
+            animation: fadeInUp 1s ease 0.5s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            text-align: center;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 4rem;
+            line-height: 1.6;
+        }
+
+        /* Who It's For Section */
+        .who-section {
+            background: var(--white);
+            border-top: 1px solid var(--subtle-border);
+        }
+
+        .criteria-list {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .criteria-item {
+            background: var(--soft-gray);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-gold);
+            transition: all 0.3s ease;
+        }
+
+        .criteria-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(138, 154, 139, 0.15);
+        }
+
+        .criteria-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .criteria-item p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Process Section */
+        .process-section {
+            background: var(--soft-gray);
+            border-top: 1px solid var(--subtle-border);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--accent-gold);
+            text-align: center;
+        }
+
+        .step-number {
+            background: var(--accent-gold);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .step-content ul {
+            list-style: none;
+            text-align: left;
+            margin-top: 1rem;
+        }
+
+        .step-content ul li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .step-content ul li::before {
+            content: '✓';
+            color: var(--accent-gold);
+            font-weight: 600;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Case Studies Section */
+        .case-studies-section {
+            background: var(--white);
+            border-top: 1px solid var(--subtle-border);
+        }
+
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .case-study-card {
+            background: var(--soft-gray);
+            padding: 3rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--accent-gold);
+            transition: all 0.3s ease;
+        }
+
+        .case-study-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(138, 154, 139, 0.15);
+            background: var(--white);
+        }
+
+        .company-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .company-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent-gold);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        .company-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .company-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: rgba(184, 150, 93, 0.1);
+            border-radius: 8px;
+        }
+
+        .detail-item {
+            text-align: center;
+        }
+
+        .detail-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .detail-value {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            margin-top: 0.25rem;
+        }
+
+        .results-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .results-list li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 2rem;
+            line-height: 1.5;
+        }
+
+        .results-list li::before {
+            content: '✓';
+            color: var(--accent-gold);
+            font-weight: 600;
+            position: absolute;
+            left: 0;
+        }
+
+        .client-quote {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-gold);
+            font-style: italic;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .client-quote::before {
+            content: '"';
+            font-size: 2rem;
+            color: var(--accent-gold);
+            line-height: 1;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--accent-gold);
+            color: var(--magnolia-cream);
+            text-align: center;
+            padding: 5rem 0;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--magnolia-cream);
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--magnolia-cream);
+            color: var(--accent-gold);
+            padding: 1.2rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--magnolia-cream);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--magnolia-cream);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--magnolia-cream);
+            padding: 1.2rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--magnolia-cream);
+        }
+
+        .btn-secondary:hover {
+            background: var(--magnolia-cream);
+            color: var(--accent-gold);
+            transform: translateY(-2px);
+        }
+
+        /* About Section */
+        .about-section {
+            background: var(--white);
+            padding: 5rem 0;
+            border-top: 1px solid var(--subtle-border);
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--magnolia-cream);
+            text-align: center;
+            padding: 4rem 0;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
+            color: var(--magnolia-cream);
+            text-decoration: none;
+            font-weight: 300;
+            transition: color 0.3s ease;
+            opacity: 0.8;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--warm-gold);
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .criteria-list {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .case-studies-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Focus states */
+        *:focus {
+            outline: 2px solid var(--accent-gold);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">JT Wu</a>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <div class="hamburger"></div>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="advisory.html">Advisory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-subtitle">Focused Advisory</div>
+                <h1 class="hero-title">Finance Sprint: Unlock What's <em class="emphasis">Next</em></h1>
+                <div class="hero-pricing">$5,000 flat · 10 business days · Founder-first advisory</div>
+                <div class="decorative-line"></div>
+                <p class="hero-description">
+                    A focused, two-week engagement for founder-led businesses looking to get unstuck, de-risked, and ready to raise, grow, or exit.
+                    You bring the hustle - I'll bring the financial clarity.
+                </p>
+            </div>
+        </section>
+
+        <!-- Who It's For Section -->
+        <section class="who-section section">
+            <div class="container">
+                <h2 class="section-title">Who It's For</h2>
+                <p class="section-subtitle">This is built for operators who need financial clarity to unlock their next chapter.</p>
+                
+                <div class="criteria-list">
+                    <div class="criteria-item">
+                        <h3>Capital Raise Ready</h3>
+                        <p>Planning a capital raise but don't have investor-ready materials</p>
+                    </div>
+                    
+                    <div class="criteria-item">
+                        <h3>Exit Preparation</h3>
+                        <p>Thinking about an exit but aren't sure where to start</p>
+                    </div>
+                    
+                    <div class="criteria-item">
+                        <h3>Growth Clarity</h3>
+                        <p>Growing fast but need clean, actionable numbers</p>
+                    </div>
+                    
+                    <div class="criteria-item">
+                        <h3>Financial Transparency</h3>
+                        <p>Saying: "Can someone just tell me what's actually going on in my books?"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process-section section">
+            <div class="container">
+                <h2 class="section-title">What You Get</h2>
+                <p class="section-subtitle">A structured, two-week process designed to deliver immediate clarity and actionable next steps.</p>
+                
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Week 1: Discovery + Deep Dive</h3>
+                        <div class="step-content">
+                            <ul>
+                                <li>60-minute kickoff call</li>
+                                <li>Assessment of your current financials</li>
+                                <li>Identify red flags, upside levers, and deal blockers</li>
+                                <li>Custom KPI dashboard or insights doc</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Week 2: Deliverable + Strategy</h3>
+                        <div class="step-content">
+                            <p>You'll get one core deliverable, such as:</p>
+                            <ul>
+                                <li>Exit Readiness Memo</li>
+                                <li>Capital Raise Roadmap</li>
+                                <li>Clean Financial Snapshot + Dashboard</li>
+                                <li>M&A Valuation + Deal Scenarios</li>
+                                <li>Operational Cash Flow Strategy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Wrap-Up: Final Call + Next Steps</h3>
+                        <div class="step-content">
+                            <ul>
+                                <li>60-minute walkthrough</li>
+                                <li>Clear roadmap: "What now / what next"</li>
+                                <li>Optional proposal to continue</li>
+                                <li>You keep everything we build</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Section -->
+        <section class="case-studies-section section">
+            <div class="container">
+                <h2 class="section-title">Finance Sprint Snapshots</h2>
+                <p class="section-subtitle">
+                    Anonymized client examples showing what's possible in just 10 business days. 
+                    Company names have been changed for confidentiality.
+                </p>
+                
+                <div class="case-studies-grid">
+                    <div class="case-study-card">
+                        <div class="company-header">
+                            <div class="company-icon">🏠</div>
+                            <div class="company-name">Liberty Home Co.</div>
+                        </div>
+                        
+                        <div class="company-details">
+                            <div class="detail-item">
+                                <div class="detail-label">Industry</div>
+                                <div class="detail-value">Real Estate / Home Services</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Region</div>
+                                <div class="detail-value">Southeast U.S.</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Sprint Focus</div>
+                                <div class="detail-value">Exit Readiness + Margin Strategy</div>
+                            </div>
+                        </div>
+                        
+                        <ul class="results-list">
+                            <li>Unlocked $2.5M+ pro forma EBITDA upside via cost optimization</li>
+                            <li>Mapped strategic buyer universe with multiple range</li>
+                            <li>Equipped leadership with exit-ready playbook + teaser package</li>
+                        </ul>
+                        
+                        <div class="client-quote">
+                            Full exit-readiness in under 14 days. Clarity we didn't even know we needed.
+                        </div>
+                    </div>
+
+                    <div class="case-study-card">
+                        <div class="company-header">
+                            <div class="company-icon">🛠️</div>
+                            <div class="company-name">JLC Inc.</div>
+                        </div>
+                        
+                        <div class="company-details">
+                            <div class="detail-item">
+                                <div class="detail-label">Industry</div>
+                                <div class="detail-value">Construction / Contracting</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Region</div>
+                                <div class="detail-value">Mid-Atlantic</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Sprint Focus</div>
+                                <div class="detail-value">Valuation Prep + Financial Cleanup</div>
+                            </div>
+                        </div>
+                        
+                        <ul class="results-list">
+                            <li>Built clean multi-entity financials from QBO chaos and legacy PDFs</li>
+                            <li>Crafted materials for institutional sale process</li>
+                            <li>Structured equity waterfall + retention incentives</li>
+                        </ul>
+                        
+                        <div class="client-quote">
+                            Positioned us for a premium outcome by giving buyers confidence in our numbers and our team.
+                        </div>
+                    </div>
+
+                    <div class="case-study-card">
+                        <div class="company-header">
+                            <div class="company-icon">💻</div>
+                            <div class="company-name">Aether Group</div>
+                        </div>
+                        
+                        <div class="company-details">
+                            <div class="detail-item">
+                                <div class="detail-label">Industry</div>
+                                <div class="detail-value">SaaS / Emerging Technology</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Region</div>
+                                <div class="detail-value">National</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Sprint Focus</div>
+                                <div class="detail-value">Fundraise Narrative + KPI Buildout</div>
+                            </div>
+                        </div>
+                        
+                        <ul class="results-list">
+                            <li>Refined TAM/SAM/SOM and investor pitch narrative</li>
+                            <li>Demonstrated scalability through unit economics and CAC payback modeling</li>
+                            <li>Designed live investor KPI dashboard with back-end customizations</li>
+                        </ul>
+                        
+                        <div class="client-quote">
+                            An operator's eye with a banker's sharpness. JT gave us the runway we needed to fundraise right.
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--soft-gray); border-radius: 12px;">
+                    <p style="color: var(--text-secondary); font-style: italic;">
+                        <strong>Note:</strong> All sprints are delivered in 10 business days and include full IP transfer. 
+                        Clients keep everything we build – and often choose to re-engage for retainer or success-based support.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">How to Book</h2>
+                <p class="cta-subtitle">
+                    To keep engagements hands-on, I open only 2 Finance Sprint slots per month.
+                </p>
+                
+                <div class="cta-buttons">
+                    <a href="mailto:jt@jtwu.org?subject=Finance Sprint - 30 Minute Intro Call" class="btn-primary">Book a 30-Minute Intro Call</a>
+                    <a href="mailto:jt@jtwu.org?subject=Finance Sprint - Sample Deliverable Request" class="btn-secondary">Request Sample Deliverable</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <h2 class="section-title">About JT Wu</h2>
+                    <p class="about-text">
+                        JT Wu is the Founder of Magnolia Prospect, a boutique advisory for founder-led businesses preparing for growth, capital, or exit. 
+                        He has created hundreds of millions of dollars in transaction value across private equity, M&A, and strategic finance.
+                    </p>
+                    <p class="about-text">
+                        A cum laude graduate of Princeton University's School of Public and International Affairs, he also serves as the elected 
+                        Chairman of Georgia's largest public library system and the Founder of Preface, a national nonprofit advancing early childhood literacy.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="advisory.html">Advisory Services</a>
+                <a href="finance-sprint.html">Finance Sprint</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>&copy; 2025 Jonathan "JT" Wu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
