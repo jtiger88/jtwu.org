@@ -328,18 +328,23 @@
             color: var(--text-primary);
             margin-bottom: 1.5rem;
             font-size: 1.2rem;
-            border-bottom: 2px solid var(--accent-gold);
-            padding-bottom: 0.5rem;
+            font-weight: 400;
         }
         
-        .contact-info p {
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
             margin-bottom: 1rem;
-            font-size: 1rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
             line-height: 1.5;
         }
 
-        .contact-info strong {
+        .contact-label {
             color: var(--text-primary);
+            font-weight: 500;
+            min-width: 80px;
+            margin-right: 1rem;
         }
 
         /* Organizations Section */
@@ -639,11 +644,26 @@
                         </div>
                         <div class="contact-info">
                             <h4>Contact Information</h4>
-                            <p><strong>Email:</strong> jt@jtwu.org</p>
-                            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/jtwu" target="_blank" style="color: var(--accent-gold);">linkedin.com/in/jtwu</a></p>
-                            <p><strong>Based:</strong> Atlanta, Georgia</p>
-                            <p><strong>Education:</strong> Princeton University, A.B.</p>
-                            <p><strong>Specialties:</strong> M&A, Strategic Finance, Civic Leadership</p>
+                            <div class="contact-item">
+                                <span class="contact-label">Email:</span>
+                                <span>jt@jtwu.org</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">LinkedIn:</span>
+                                <a href="https://linkedin.com/in/jtwu" target="_blank" style="color: var(--accent-gold); text-decoration: none;">linkedin.com/in/jtwu</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Based:</span>
+                                <span>Atlanta, Georgia</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Education:</span>
+                                <span>Princeton University, A.B.</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Specialties:</span>
+                                <span>M&A, Strategic Finance, Civic Leadership</span>
+                            </div>
                         </div>
                     </div>
                 </div>
