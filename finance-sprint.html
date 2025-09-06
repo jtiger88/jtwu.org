@@ -395,8 +395,8 @@
 
         .case-studies-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
             margin-top: 3rem;
         }
 
@@ -433,8 +433,9 @@
         }
 
         .company-name {
+            font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
-            font-weight: 600;
+            font-weight: 400;
             color: var(--text-primary);
         }
 
@@ -636,6 +637,7 @@
 
             .case-studies-grid {
                 grid-template-columns: 1fr;
+                gap: 3rem;
             }
 
             .cta-buttons {
