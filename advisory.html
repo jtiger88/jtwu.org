@@ -302,10 +302,39 @@
         .cta-primary {
             background: var(--accent-gold);
             color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-width: 200px;
+            padding: 1rem 2rem;
         }
 
         .cta-primary:hover {
             background: var(--warm-gold);
+            transform: translateY(-2px);
+        }
+
+        .consult-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            opacity: 0.9;
+            margin-bottom: 0.25rem;
+        }
+
+        .consult-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 0.25rem;
+        }
+
+        .consult-details {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            font-weight: 500;
         }
 
         .cta-sprint {
@@ -723,7 +752,11 @@
                     and civic institutions navigating growth, transitions, and meaningful exits with expertise and integrity.
                 </p>
                 <div class="hero-cta-buttons">
-                    <a href="contact.html" class="cta-button cta-primary">Schedule a Consultation</a>
+                    <a href="contact.html" class="cta-button cta-primary">
+                        <span class="consult-label">Strategic Advisory</span>
+                        <span class="consult-title">Schedule Consultation</span>
+                        <span class="consult-details">Custom Engagement • Full-Service</span>
+                    </a>
                     <a href="finance-sprint.html" class="cta-button cta-sprint">
                         <span class="sprint-label">Founder Jumpstart</span>
                         <span class="sprint-title">Finance Sprint</span>
