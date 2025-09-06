@@ -187,6 +187,22 @@
         .services-section {
             padding: 6rem 0;
             background: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-section::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            transform: rotate(15deg);
+            background: url('data:image/svg+xml,<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="magnolia-services" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"><g opacity="0.08"><path d="M100,40 Q85,50 75,70 Q70,90 75,110 Q80,130 90,145 Q95,155 100,160 Q105,155 110,145 Q120,130 125,110 Q130,90 125,70 Q115,50 100,40" fill="%23c9a876" stroke="none"/><path d="M100,45 Q90,55 85,75 Q90,95 100,110 Q110,95 115,75 Q110,55 100,45" fill="none" stroke="%23faf8f5" stroke-width="0.6" opacity="0.4"/></g><g transform="translate(50,150) rotate(-45)" opacity="0.06"><path d="M0,0 Q-8,5 -12,15 Q-10,25 -5,35 Q0,42 5,45 Q10,42 15,35 Q20,25 22,15 Q18,5 0,0" fill="%238a9a8b" stroke="none"/></g></pattern></defs><rect width="200" height="200" fill="url(%23magnolia-services)"/></svg>') repeat;
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .section-title {
@@ -210,6 +226,8 @@
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 3rem;
             margin-top: 3rem;
+            position: relative;
+            z-index: 1;
         }
 
         .service-card {
@@ -297,10 +315,28 @@
             padding: 6rem 0;
             background: var(--soft-gray);
             border-top: 1px solid var(--subtle-border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .results-section::before {
+            content: '';
+            position: absolute;
+            bottom: -10%;
+            left: -15%;
+            width: 700px;
+            height: 700px;
+            transform: rotate(-20deg);
+            background: url('data:image/svg+xml,<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="magnolia-results" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"><g opacity="0.06"><path d="M100,40 Q85,50 75,70 Q70,90 75,110 Q80,130 90,145 Q95,155 100,160 Q105,155 110,145 Q120,130 125,110 Q130,90 125,70 Q115,50 100,40" fill="%23c9a876" stroke="none"/><path d="M100,50 L100,150" fill="none" stroke="%23faf8f5" stroke-width="0.4" opacity="0.3"/></g><g transform="translate(160,120) rotate(30)" opacity="0.08"><path d="M0,0 Q-6,8 -8,18 Q-5,28 0,35 Q3,40 8,42 Q13,40 18,35 Q23,28 25,18 Q20,8 0,0" fill="%238a9a8b" stroke="none"/></g></pattern></defs><rect width="200" height="200" fill="url(%23magnolia-results)"/></svg>') repeat;
+            opacity: 0.3;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .results-content {
             text-align: center;
+            position: relative;
+            z-index: 1;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -628,6 +664,28 @@
                             <p>Multisector portfolio management and strategic advisory for diversified investment holding company.</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Finance Sprint Section -->
+        <section class="finance-sprint-section" style="padding: 5rem 0; background: var(--accent-gold); color: var(--magnolia-cream); border-top: 1px solid var(--subtle-border);">
+            <div class="container">
+                <div class="finance-sprint-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <h2 style="font-size: 2.2rem; margin-bottom: 1rem; color: var(--magnolia-cream);">Finance Sprint: Unlock What's Next</h2>
+                    <p style="font-size: 1.3rem; margin-bottom: 1.5rem; opacity: 0.9; font-weight: 300;">$5,000 flat · 10 business days · Results guaranteed</p>
+                    <p style="font-size: 1.1rem; margin-bottom: 2.5rem; line-height: 1.6; opacity: 0.95;">
+                        Need clarity fast? Our focused two-week engagement gets founder-led businesses <strong>unstuck, de-risked, and ready to raise, grow, or exit</strong>. 
+                        From exit readiness memos to capital raise roadmaps - we deliver actionable results in just 10 business days.
+                    </p>
+                    <a href="https://your-notion-url-here" target="_blank" class="finance-sprint-button" 
+                       style="display: inline-block; background: var(--magnolia-cream); color: var(--accent-gold); 
+                              padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; 
+                              font-size: 1.1rem; transition: all 0.3s ease; border: 2px solid var(--magnolia-cream);"
+                       onmouseover="this.style.background='transparent'; this.style.color='var(--magnolia-cream)';"
+                       onmouseout="this.style.background='var(--magnolia-cream)'; this.style.color='var(--accent-gold)';">
+                        View Finance Sprint Details →
+                    </a>
                 </div>
             </div>
         </section>
