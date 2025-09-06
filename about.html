@@ -520,16 +520,16 @@
 
         /* Mobile Profile Header (Willkie-style) */
         @media (max-width: 768px) {
-            .hero-section {
-                display: none;
+            .hero-title {
+                font-size: 2.2rem;
             }
             
             .bio-section {
-                padding: 6rem 0 3rem;
+                padding: 3rem 0;
             }
 
             .bio-content {
-                display: block;
+                display: none;
             }
 
             /* Profile Header Section */
@@ -637,7 +637,9 @@
 
             .organizations-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
+                gap: 1.5rem;
+                margin: 0 auto;
+                max-width: 100%;
             }
 
             .quote-text {
