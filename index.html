@@ -467,14 +467,18 @@
             
             .nav-links {
                 position: fixed;
-                top: 70px;
+                top: 90px;
                 left: -100%;
                 width: 100%;
-                background: var(--dark-bg);
+                background: var(--magnolia-cream);
+                backdrop-filter: blur(15px);
+                border-radius: 0 0 12px 12px;
+                box-shadow: 0 8px 32px rgba(138, 154, 139, 0.15);
                 flex-direction: column;
                 padding: 2rem;
-                border-top: 1px solid rgba(255,255,255,0.1);
+                border-top: 1px solid var(--subtle-border);
                 transition: left 0.3s ease;
+                gap: 1rem;
             }
             
             .nav-links.active {

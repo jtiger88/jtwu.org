@@ -145,15 +145,15 @@
                 top: 90px;
                 left: -100%;
                 width: 100%;
-                height: calc(100vh - 90px);
                 background: var(--magnolia-cream);
+                backdrop-filter: blur(15px);
+                border-radius: 0 0 12px 12px;
+                box-shadow: 0 8px 32px rgba(138, 154, 139, 0.15);
                 flex-direction: column;
                 padding: 2rem;
                 border-top: 1px solid var(--subtle-border);
                 transition: left 0.3s ease;
                 gap: 1rem;
-                z-index: 999;
-                overflow-y: auto;
             }
             
             .nav-links.active {
