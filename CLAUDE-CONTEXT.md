@@ -1,0 +1,65 @@
+# JT Wu Personal Website - Claude Context
+
+## Project Overview
+Professional website for Jonathan "JT" Wu, showcasing his work as a civic-minded entrepreneur and strategic finance advisor. The current implementation has evolved significantly from the original brief into a sophisticated magnolia-themed design.
+
+## Current Design & Branding
+**Color Palette** (evolved from original Princeton Orange):
+- `--magnolia-cream: #faf8f5` (main background)
+- `--warm-gold: #c9a876`
+- `--sage-green: #8a9a8b`
+- `--dark-sage: #5d6b5e`
+- `--charcoal: #3a3d3a`
+- `--accent-gold: #b8965d`
+
+**Typography**: Playfair Display (headings) + Inter (body) - maintained from original brief
+
+**Key Design Features**:
+- Beautiful magnolia SVG pattern in hero background with botanical decorative elements
+- Sophisticated logo hover effects with grayscale/opacity transitions and translateY animations
+- Clean, professional layout with subtle botanical touches throughout
+- Mobile-responsive design with backdrop-filter blur effects
+
+## Tech Stack
+- Static HTML/CSS/JavaScript (index.html)
+- Modern responsive design with CSS custom properties
+- Ready for deployment on Vercel/Netlify
+
+## Key Files
+- Main website: `index.html` 
+- Additional pages: `about.html`, `advisory.html`, `contact.html`
+- Design documentation: `DESIGN_CHECKPOINT.md`
+- Original brief reference: `../Website Schema/Jtwu Website Brief.pdf`
+
+## Design Evolution
+**Original Brief** (in Website Schema folder):
+- Navy/Slate/White with Princeton Orange accents
+- Clean serif + sans serif pairing
+- Focus on credibility and cross-sector impact
+
+**Current Implementation**:
+- Magnolia/sage botanical theme (ties to "Magnolia Prospect" advisory brand)
+- Enhanced with decorative SVG magnolia patterns
+- Sophisticated hover interactions
+- More elegant and distinctive than typical corporate designs
+
+## Development Notes
+- Images needed: `jt-wu-professional.jpg` (500x500px), `jt-wu-og-image.jpg` (1200x630px)
+- Contact form ready for backend integration (currently uses setTimeout mock)
+- SEO optimized with structured data for Jonathan "JT" Wu
+- WCAG compliant accessibility with proper focus states
+- Current layout is approved and should be maintained
+
+## Content Structure (per original brief)
+- Hero: "Capital & Community. Strategy with Purpose."
+- About: "Rooted in Georgia. Engaged Globally. Driven by Impact."
+- Advisory Work: Magnolia Prospect white-glove services
+- Civic Leadership: Preface nonprofit, Gwinnett Library System
+- Ventures: AAVM, Korean/Chinese American Voices, etc.
+- Speaking & Media opportunities
+- Contact form and social links
+
+## Deployment Status
+- Git repository initialized
+- Ready for Vercel/Netlify deployment
+- Domain: jtwu.org (per meta tags)

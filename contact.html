@@ -130,8 +130,8 @@
             transition: all 0.3s ease;
         }
         
-        .hamburger::before { top: -8px; }
-        .hamburger::after { top: 8px; }
+        .hamburger::before { top: -8px; left: 0; }
+        .hamburger::after { top: 8px; left: 0; }
 
         @media (max-width: 768px) {
             .mobile-menu-toggle {
@@ -143,8 +143,10 @@
                 top: 90px;
                 left: -100%;
                 width: 100%;
-                background: rgba(250, 248, 245, 0.98);
+                background: var(--magnolia-cream);
                 backdrop-filter: blur(15px);
+                border-radius: 0 0 12px 12px;
+                box-shadow: 0 8px 32px rgba(138, 154, 139, 0.15);
                 flex-direction: column;
                 padding: 2rem;
                 border-top: 1px solid var(--subtle-border);
