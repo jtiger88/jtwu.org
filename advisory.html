@@ -153,29 +153,62 @@
         .hero-content {
             position: relative;
             z-index: 1;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-primary);
-            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
+            font-size: 0.95rem;
             color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
             margin-bottom: 2rem;
             font-weight: 500;
-            letter-spacing: 1px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+            color: var(--text-primary);
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-title .emphasis {
+            color: var(--accent-gold);
+            font-style: italic;
+        }
+
+        .decorative-line {
+            width: 80px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--accent-gold), transparent);
+            margin: 3rem auto;
+            animation: fadeInUp 1s ease 0.3s both;
         }
 
         .hero-description {
-            font-size: 1.3rem;
-            max-width: 800px;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
             margin: 0 auto 3rem;
             line-height: 1.7;
-            color: var(--text-secondary);
+            font-weight: 300;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .cta-button {
@@ -190,6 +223,7 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(184, 150, 93, 0.3);
             letter-spacing: 0.5px;
+            animation: fadeInUp 1s ease 0.6s both;
         }
 
         .cta-button:hover {
@@ -555,16 +589,15 @@
     <main>
         <!-- Hero Section -->
         <section class="hero-section">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">Magnolia Prospect</h1>
-                    <p class="hero-subtitle">White-Glove Advisory for Founders & Families</p>
-                    <p class="hero-description">
-                        Strategic finance advisory services helping business owners, family offices, and civic institutions 
-                        navigate growth, transitions, and meaningful exits with expertise and integrity.
-                    </p>
-                    <a href="contact.html" class="cta-button">Schedule a Consultation</a>
-                </div>
+            <div class="hero-content">
+                <div class="hero-subtitle">Strategic Finance</div>
+                <h1 class="hero-title">White-Glove <em class="emphasis">Advisory</em>.</h1>
+                <div class="decorative-line"></div>
+                <p class="hero-description">
+                    Magnolia Prospect delivers strategic finance advisory services for business owners, family offices, 
+                    and civic institutions navigating growth, transitions, and meaningful exits with expertise and integrity.
+                </p>
+                <a href="contact.html" class="cta-button">Schedule a Consultation</a>
             </div>
         </section>
 
