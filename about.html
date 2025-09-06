@@ -482,6 +482,11 @@
             color: var(--warm-gold);
         }
 
+        /* Hide mobile profile header on desktop */
+        .mobile-profile-header {
+            display: none;
+        }
+
         /* Footer */
         footer {
             background: var(--charcoal);
@@ -513,33 +518,116 @@
             opacity: 1;
         }
 
-        /* Responsive Design */
+        /* Mobile Profile Header (Willkie-style) */
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.2rem;
+            .hero-section {
+                display: none;
             }
             
-            .professional-title {
-                font-size: 2.2rem;
+            .bio-section {
+                padding: 6rem 0 3rem;
             }
 
             .bio-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
+                display: block;
             }
 
+            /* Profile Header Section */
+            .mobile-profile-header {
+                display: block;
+                text-align: left;
+                margin-bottom: 3rem;
+            }
+
+            .profile-header-content {
+                display: flex;
+                align-items: flex-start;
+                gap: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .profile-photo {
+                flex-shrink: 0;
+                width: 120px;
+                height: 120px;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+
+            .profile-photo img,
+            .profile-photo .photo-placeholder {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .profile-photo .photo-placeholder {
+                background: var(--sage-green);
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.8rem;
+                font-weight: 600;
+            }
+
+            .profile-info h1 {
+                font-size: 2.2rem;
+                font-family: 'Playfair Display', serif;
+                color: var(--text-primary);
+                margin-bottom: 0.5rem;
+                line-height: 1.2;
+            }
+
+            .profile-title {
+                font-size: 1.1rem;
+                color: var(--text-secondary);
+                font-weight: 500;
+                margin-bottom: 1.5rem;
+                padding-bottom: 0.5rem;
+                border-bottom: 1px solid var(--subtle-border);
+            }
+
+            /* Contact Details */
+            .contact-details {
+                margin-bottom: 2rem;
+            }
+
+            .contact-item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0.8rem;
+                font-size: 0.95rem;
+                color: var(--text-secondary);
+            }
+
+            .contact-icon {
+                width: 20px;
+                margin-right: 1rem;
+                color: var(--text-secondary);
+                opacity: 0.7;
+            }
+
+            /* Bio Text */
             .bio-text {
                 padding-right: 0;
-                order: 2;
             }
 
+            .bio-text p {
+                font-size: 1rem;
+                line-height: 1.7;
+                margin-bottom: 1.5rem;
+            }
+
+            .bio-intro {
+                font-size: 1.1rem !important;
+                font-weight: 600;
+                color: var(--text-primary) !important;
+            }
+
+            /* Hide desktop sidebar on mobile */
             .bio-sidebar {
-                order: 1;
-                position: static;
-                background: transparent;
-                border: none;
-                padding: 2rem 0;
-                border-radius: 0;
+                display: none;
             }
 
             .civic-content {
@@ -554,21 +642,6 @@
 
             .quote-text {
                 font-size: 1.4rem;
-            }
-
-            .bio-sidebar .contact-info h4 {
-                border-bottom: none;
-                margin-bottom: 1rem;
-                font-size: 1.1rem;
-            }
-
-            .bio-sidebar .contact-info {
-                margin-top: 1.5rem;
-            }
-
-            .bio-sidebar .contact-info p {
-                font-size: 0.95rem;
-                margin-bottom: 0.8rem;
             }
         }
 
@@ -613,6 +686,42 @@
         <!-- Bio Section -->
         <section class="bio-section">
             <div class="container">
+                <!-- Mobile Profile Header (Willkie-style) -->
+                <div class="mobile-profile-header">
+                    <div class="profile-header-content">
+                        <div class="profile-photo">
+                            <img src="jt-wu-professional.jpg" alt="Jonathan JT Wu" style="display: none;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="photo-placeholder">JT Wu</div>
+                        </div>
+                        <div class="profile-info">
+                            <h1>Jonathan "JT" Wu</h1>
+                            <div class="profile-title">Strategic Finance Advisor</div>
+                        </div>
+                    </div>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>Atlanta, Georgia</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>jt@jtwu.org</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🔗</div>
+                            <div><a href="https://linkedin.com/in/jtwu" target="_blank" style="color: var(--accent-gold); text-decoration: none;">linkedin.com/in/jtwu</a></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🎓</div>
+                            <div>Princeton University, A.B.</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📄</div>
+                            <div><a href="#" style="color: var(--accent-gold); text-decoration: none;">Download vCard</a></div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="bio-content">
                     <div class="bio-text">
                         <p class="bio-intro">
