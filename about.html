@@ -278,13 +278,19 @@
         
         .bio-content {
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 1fr 2fr;
             gap: 4rem;
             align-items: start;
+            margin-bottom: 4rem;
         }
         
         .bio-text {
-            padding-right: 2rem;
+            padding-right: 0;
+        }
+        
+        .bio-full-width {
+            grid-column: 1 / -1;
+            margin-top: 2rem;
         }
         
         .bio-text p {
