@@ -281,13 +281,71 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(184, 150, 93, 0.3);
             letter-spacing: 0.5px;
-            animation: fadeInUp 1s ease 0.6s both;
         }
 
         .cta-button:hover {
             background: var(--warm-gold);
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(184, 150, 93, 0.4);
+        }
+
+        /* Hero CTA Buttons */
+        .hero-cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .cta-primary {
+            background: var(--accent-gold);
+            color: white;
+        }
+
+        .cta-primary:hover {
+            background: var(--warm-gold);
+        }
+
+        .cta-sprint {
+            background: var(--white);
+            color: var(--accent-gold);
+            border: 2px solid var(--accent-gold);
+            padding: 1rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-width: 200px;
+        }
+
+        .cta-sprint:hover {
+            background: var(--accent-gold);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .sprint-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            opacity: 0.8;
+            margin-bottom: 0.25rem;
+        }
+
+        .sprint-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 0.25rem;
+        }
+
+        .sprint-details {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            font-weight: 500;
         }
 
         /* Services Section */
@@ -602,6 +660,12 @@
                 font-size: 1.1rem;
             }
 
+            .hero-cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
             .services-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -658,7 +722,14 @@
                     Magnolia Prospect delivers strategic finance advisory services for business owners, family offices, 
                     and civic institutions navigating growth, transitions, and meaningful exits with expertise and integrity.
                 </p>
-                <a href="contact.html" class="cta-button">Schedule a Consultation</a>
+                <div class="hero-cta-buttons">
+                    <a href="contact.html" class="cta-button cta-primary">Schedule a Consultation</a>
+                    <a href="finance-sprint.html" class="cta-button cta-sprint">
+                        <span class="sprint-label">Founder Jumpstart</span>
+                        <span class="sprint-title">Finance Sprint</span>
+                        <span class="sprint-details">$5K • 10 Days • Results Guaranteed</span>
+                    </a>
+                </div>
             </div>
         </section>
 
