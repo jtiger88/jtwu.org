@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advisory Services - Magnolia Prospect | JT Wu Strategic Finance</title>
+    <meta name="description" content="White-glove advisory services from JT Wu's Magnolia Prospect. Expert M&A execution, strategic finance, and fractional CFO services for business owners and family offices.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --magnolia-cream: #faf8f5;
+            --warm-gold: #c9a876;
+            --sage-green: #8a9a8b;
+            --dark-sage: #5d6b5e;
+            --charcoal: #3a3d3a;
+            --soft-gray: #f5f3f0;
+            --accent-gold: #b8965d;
+            --text-primary: #2d2f2d;
+            --text-secondary: #5d6b5e;
+            --white: #ffffff;
+            --subtle-border: rgba(138, 154, 139, 0.2);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: var(--magnolia-cream);
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--text-primary);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid var(--subtle-border);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 400;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--accent-gold);
+            outline: none;
+        }
+        
+        .nav-links a:focus {
+            outline: 1px solid var(--accent-gold);
+            outline-offset: 2px;
+        }
+
+        .nav-links a.active {
+            color: var(--accent-gold);
+            font-weight: 500;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .hamburger {
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: all 0.3s ease;
+            left: 0;
+        }
+        
+        .hamburger::before { top: -8px; }
+        .hamburger::after { top: 8px; }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 90px;
+                left: -100%;
+                width: 100%;
+                background: var(--magnolia-cream);
+                backdrop-filter: blur(15px);
+                border-radius: 0 0 12px 12px;
+                box-shadow: 0 8px 32px rgba(138, 154, 139, 0.15);
+                flex-direction: column;
+                padding: 2rem;
+                border-top: 1px solid var(--subtle-border);
+                transition: left 0.3s ease;
+                gap: 1rem;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+
+        }
+
+        /* Main Content */
+        main {
+            padding-top: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 8rem 0 5rem;
+            background: var(--magnolia-cream);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--subtle-border);
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(201, 168, 118, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(138, 154, 139, 0.06) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            height: 800px;
+            transform: translate(-50%, -50%) rotate(45deg);
+            background: url('data:image/svg+xml,<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="magnolia-hero" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"><g opacity="0.12"><path d="M100,40 Q85,50 75,70 Q70,90 75,110 Q80,130 90,145 Q95,155 100,160 Q105,155 110,145 Q120,130 125,110 Q130,90 125,70 Q115,50 100,40" fill="%23c9a876" stroke="none"/><path d="M100,45 Q90,55 85,75 Q90,95 100,110 Q110,95 115,75 Q110,55 100,45" fill="none" stroke="%23faf8f5" stroke-width="0.6" opacity="0.4"/><path d="M100,50 L100,150" fill="none" stroke="%23faf8f5" stroke-width="0.4" opacity="0.3"/></g><g transform="translate(50,150) rotate(-45)" opacity="0.08"><path d="M0,0 Q-8,5 -12,15 Q-10,25 -5,35 Q0,42 5,45 Q10,42 15,35 Q20,25 22,15 Q18,5 0,0" fill="%238a9a8b" stroke="none"/><path d="M0,2 L0,40" fill="none" stroke="%23faf8f5" stroke-width="0.3" opacity="0.3"/></g><g transform="translate(160,120) rotate(30)" opacity="0.1"><path d="M0,0 Q-6,8 -8,18 Q-5,28 0,35 Q3,40 8,42 Q13,40 18,35 Q23,28 25,18 Q20,8 0,0" fill="%23c9a876" stroke="none"/></g></pattern></defs><rect width="200" height="200" fill="url(%23magnolia-hero)"/></svg>') repeat;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero-subtitle {
+            font-size: 0.95rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+            color: var(--text-primary);
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-title .emphasis {
+            color: var(--accent-gold);
+            font-style: italic;
+        }
+
+        .decorative-line {
+            width: 80px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--accent-gold), transparent);
+            margin: 3rem auto;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+            font-weight: 300;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--accent-gold);
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 2px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(184, 150, 93, 0.3);
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button:hover {
+            background: var(--warm-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(184, 150, 93, 0.4);
+        }
+
+        /* Hero CTA Buttons */
+        .hero-cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .hero-cta-buttons .cta-button {
+            flex: 1;
+            max-width: 350px;
+            min-width: 320px;
+        }
+
+        .cta-primary {
+            background: var(--accent-gold);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-width: 200px;
+            padding: 1rem 2rem;
+        }
+
+        .cta-primary:hover {
+            background: var(--warm-gold);
+            transform: translateY(-2px);
+        }
+
+        .consult-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            opacity: 0.9;
+            margin-bottom: 0.25rem;
+        }
+
+        .consult-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 0.25rem;
+        }
+
+        .consult-details {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .cta-sprint {
+            background: var(--white);
+            color: var(--accent-gold);
+            border: 2px solid var(--accent-gold);
+            padding: 1rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-width: 200px;
+        }
+
+        .cta-sprint:hover {
+            background: var(--accent-gold);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .sprint-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            opacity: 0.8;
+            margin-bottom: 0.25rem;
+        }
+
+        .sprint-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 0.25rem;
+        }
+
+        .sprint-details {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 6rem 0;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 80% 20%, rgba(201, 168, 118, 0.15) 0%, transparent 30%),
+                radial-gradient(circle at 20% 80%, rgba(138, 154, 139, 0.12) 0%, transparent 35%),
+                radial-gradient(circle at 60% 50%, rgba(201, 168, 118, 0.08) 0%, transparent 25%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            text-align: center;
+            color: var(--accent-gold);
+            margin-bottom: 4rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card {
+            background: var(--soft-gray);
+            padding: 3rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--accent-gold);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(138, 154, 139, 0.15);
+            background: white;
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .service-card p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 6rem 0;
+            background: var(--charcoal);
+            color: var(--magnolia-cream);
+            border-top: 1px solid var(--subtle-border);
+        }
+
+        .process-section .section-title {
+            color: var(--magnolia-cream);
+        }
+
+        .process-section .section-subtitle {
+            color: var(--warm-gold);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 auto 1.5rem;
+        }
+
+        .process-step h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--magnolia-cream);
+        }
+
+        .process-step p {
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* Client Results Section */
+        .results-section {
+            padding: 6rem 0;
+            background: var(--soft-gray);
+            border-top: 1px solid var(--subtle-border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .results-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(138, 154, 139, 0.12) 0%, transparent 35%),
+                radial-gradient(circle at 70% 70%, rgba(201, 168, 118, 0.10) 0%, transparent 30%),
+                radial-gradient(circle at 90% 10%, rgba(138, 154, 139, 0.08) 0%, transparent 25%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .results-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .results-intro {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .client-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .client-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(138, 154, 139, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .client-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(138, 154, 139, 0.15);
+        }
+
+        .client-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .client-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Contact CTA Section */
+        .contact-cta-section {
+            padding: 5rem 0;
+            background: white;
+            text-align: center;
+            border-top: 1px solid var(--subtle-border);
+        }
+
+        .contact-cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .contact-cta-text {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--accent-gold);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(184, 150, 93, 0.3);
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary:hover {
+            background: var(--warm-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(184, 150, 93, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-secondary);
+            border: 2px solid var(--subtle-border);
+            padding: 1.2rem 2.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-secondary:hover {
+            background: var(--soft-gray);
+            color: var(--accent-gold);
+            border-color: var(--accent-gold);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--magnolia-cream);
+            text-align: center;
+            padding: 4rem 0;
+            border-top: 1px solid var(--subtle-border);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
+            color: var(--magnolia-cream);
+            text-decoration: none;
+            font-weight: 300;
+            transition: color 0.3s ease;
+            opacity: 0.8;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--warm-gold);
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-description {
+                font-size: 1.1rem;
+            }
+
+            .hero-cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .hero-cta-buttons .cta-button {
+                width: 100%;
+                max-width: 340px;
+                min-width: auto;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        /* Focus states */
+        *:focus {
+            outline: 2px solid var(--accent-gold);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">JT Wu</a>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <div class="hamburger"></div>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="advisory.html" class="active">Advisory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-subtitle">Strategic Finance</div>
+                <h1 class="hero-title">White-Glove <em class="emphasis">Advisory</em>.</h1>
+                <div class="decorative-line"></div>
+                <p class="hero-description">
+                    Magnolia Prospect delivers strategic finance advisory services for business owners, family offices, 
+                    and civic institutions navigating growth, transitions, and meaningful exits with expertise and integrity.
+                </p>
+                <div class="hero-cta-buttons">
+                    <a href="contact.html" class="cta-button cta-primary">
+                        <span class="consult-label">Strategic Advisory</span>
+                        <span class="consult-title">Schedule Consultation</span>
+                        <span class="consult-details">Custom Engagement • Full-Service</span>
+                    </a>
+                    <a href="finance-sprint.html" class="cta-button cta-sprint">
+                        <span class="sprint-label">Founder Jumpstart</span>
+                        <span class="sprint-title">Finance Sprint</span>
+                        <span class="sprint-details">$5K Flat • 10 Days • Clarity Guaranteed</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section">
+            <div class="container">
+                <h2 class="section-title">Advisory Services</h2>
+                <p class="section-subtitle">Comprehensive Strategic Finance Solutions</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Strategic Finance & Capital Raises</h3>
+                        <p>Expert guidance on funding strategies, capital structure optimization, and investor relations. 
+                           From seed funding to growth capital, we help you secure the right financing at the right terms 
+                           to fuel your strategic objectives.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Sell-Side M&A and Roll-Up Execution</h3>
+                        <p>Comprehensive transaction support from strategy development to closing. We manage the entire 
+                           process including valuation, buyer identification, due diligence coordination, and negotiation 
+                           to maximize value realization.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Fractional CFO & Business Development</h3>
+                        <p>Strategic financial leadership without the full-time commitment. Our fractional CFO services 
+                           provide executive-level financial expertise, strategic planning, and growth acceleration 
+                           tailored to your organization's stage and needs.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Financial Modeling & Valuation</h3>
+                        <p>Sophisticated financial analysis and modeling to support informed decision-making. From DCF 
+                           models to complex scenario analysis, we provide the quantitative foundation for strategic 
+                           initiatives and transaction evaluation.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Turnaround & Restructuring</h3>
+                        <p>Crisis navigation and operational restructuring to restore financial health and operational 
+                           efficiency. We work with stakeholders to develop and execute comprehensive turnaround strategies 
+                           that preserve value and ensure sustainable recovery.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Stakeholder Communication & Policy Navigation</h3>
+                        <p>Strategic messaging and stakeholder management across complex organizational environments. 
+                           Our expertise in both private sector and public policy helps navigate regulatory requirements 
+                           and maintain stakeholder alignment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process-section">
+            <div class="container">
+                <h2 class="section-title">Our Process</h2>
+                <p class="section-subtitle">A Systematic Approach to Strategic Excellence</p>
+                
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4>Discovery & Assessment</h4>
+                        <p>Comprehensive analysis of your current situation, objectives, and constraints to develop a clear understanding of the strategic landscape.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4>Strategy Development</h4>
+                        <p>Collaborative strategy formulation incorporating financial modeling, market analysis, and stakeholder considerations to create actionable plans.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4>Implementation Support</h4>
+                        <p>Hands-on execution support including process management, stakeholder coordination, and real-time strategy adjustment as situations evolve.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4>Outcome Optimization</h4>
+                        <p>Continuous monitoring and optimization to ensure strategic objectives are achieved and value is maximized throughout the engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Results Section -->
+        <section class="results-section">
+            <div class="container">
+                <h2 class="section-title">Client Success</h2>
+                <div class="results-content">
+                    <p class="results-intro">
+                        Our clients span multiple industries and organizational types, from high-growth startups to 
+                        established family businesses to complex civic institutions. We bring the same commitment 
+                        to excellence and strategic thinking to every engagement.
+                    </p>
+                    
+                    <div class="client-highlights">
+                        <div class="client-card">
+                            <h4>High Ground Title</h4>
+                            <p>Roll-up CFO services and sponsor coordination for strategic consolidation in the title insurance sector.</p>
+                        </div>
+                        
+                        <div class="client-card">
+                            <h4>Artisse</h4>
+                            <p>Crypto/AI venture structuring and strategic finance advisory for innovative technology platform.</p>
+                        </div>
+                        
+                        <div class="client-card">
+                            <h4>CTSP Holdings</h4>
+                            <p>Multisector portfolio management and strategic advisory for diversified investment holding company.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Finance Sprint Section -->
+        <section class="finance-sprint-section" style="padding: 5rem 0; background: var(--accent-gold); color: var(--magnolia-cream); border-top: 1px solid var(--subtle-border);">
+            <div class="container">
+                <div class="finance-sprint-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <h2 style="font-size: 2.2rem; margin-bottom: 1rem; color: var(--magnolia-cream);">Finance Sprint: Unlock What's Next</h2>
+                    <p style="font-size: 1.3rem; margin-bottom: 1.5rem; opacity: 0.9; font-weight: 300;">$5,000 flat · 10 business days · Results guaranteed</p>
+                    <p style="font-size: 1.1rem; margin-bottom: 2.5rem; line-height: 1.6; opacity: 0.95;">
+                        Need clarity fast? Our focused two-week engagement gets founder-led businesses <strong>unstuck, de-risked, and ready to raise, grow, or exit</strong>. 
+                        From exit readiness memos to capital raise roadmaps - we deliver actionable results in just 10 business days.
+                    </p>
+                    <a href="finance-sprint.html" class="finance-sprint-button" 
+                       style="display: inline-block; background: var(--magnolia-cream); color: var(--accent-gold); 
+                              padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; 
+                              font-size: 1.1rem; transition: all 0.3s ease; border: 2px solid var(--magnolia-cream);"
+                       onmouseover="this.style.background='transparent'; this.style.color='var(--magnolia-cream)';"
+                       onmouseout="this.style.background='var(--magnolia-cream)'; this.style.color='var(--accent-gold)';">
+                        View Finance Sprint Details →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section -->
+        <section class="contact-cta-section">
+            <div class="container">
+                <div class="contact-cta-content">
+                    <h2 class="contact-cta-title">Ready to Get Started?</h2>
+                    <p class="contact-cta-text">
+                        Whether you're exploring a transaction, need fractional CFO support, or require strategic financial guidance, 
+                        we're here to help you achieve your objectives with confidence and clarity.
+                    </p>
+                    <div class="contact-buttons">
+                        <a href="contact.html" class="btn-primary">Schedule Consultation</a>
+                        <a href="about.html" class="btn-secondary">Learn About JT</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="https://linkedin.com/in/jtwu" target="_blank">LinkedIn</a>
+            </div>
+            <p>&copy; 2025 Jonathan "JT" Wu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
