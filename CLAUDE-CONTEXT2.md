@@ -68,6 +68,12 @@ Professional website for Jonathan "JT" Wu, showcasing his work as a civic-minded
 - **Desktop vs Mobile separation** - When user asks for desktop changes, focus ONLY on desktop without touching mobile layouts
 - **Communication clarity** - User wanted Willkie-style improvements, not complete replacement of existing functional layouts
 
+**Latest Updates (Current Session):**
+- **Mobile Logo Layout Fixes (Sept 2024)**: Fixed mobile layout issues across homepage and About page where organization logos were spilling off right side of screen
+- **About Page Mobile Optimization**: Reduced gap from 2rem to 1.5rem, added container constraints (`max-width: 100%`, `padding: 0 1rem`), reduced logo sizing (100px vs 140px width), optimized padding and min-height
+- **Homepage Mobile Consistency**: Applied same mobile alignment improvements to match About page - reduced logo sizing (100px width, 50px height), added container constraints, consistent mobile experience
+- **Standard Workflow Established**: Push changes immediately after implementation for live review on Vercel
+
 **Previous Updates:**
 - **Mobile Navigation**: Standardized hamburger menu with proper alignment (`left: 0` on pseudo-elements), solid `var(--magnolia-cream)` background, backdrop-filter blur, rounded corners, and consistent font sizing across all pages
 - **Hero Section Spacing**: Fixed white bar gaps by updating hero padding to `8rem 0 5rem` for proper spacing below fixed navigation
@@ -91,6 +97,7 @@ Professional website for Jonathan "JT" Wu, showcasing his work as a civic-minded
 - Contact form and social links
 
 ## Deployment Status
-- Git repository initialized
-- Ready for Vercel/Netlify deployment
-- Domain: jtwu.org (per meta tags)
+- **Git Repository**: https://github.com/jtiger88/jtwu.org.git
+- **Live Site**: Deployed on Vercel (auto-deploys from GitHub main branch)
+- **Domain**: jtwu.org (per meta tags)
+- **Workflow**: Standard practice is to push changes immediately after implementation for live review
