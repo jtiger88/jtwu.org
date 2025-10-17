@@ -116,3 +116,19 @@ Professional website for Jonathan "JT" Wu, showcasing his work as a civic-minded
 - **Live Site**: Deployed on Vercel (auto-deploys from GitHub main branch)
 - **Domain**: jtwu.org (per meta tags)
 - **Workflow**: Standard practice is to push changes immediately after implementation for live review
+
+## Recent Updates (October 16, 2025)
+
+### Strategic Pivot - Advisory Page Transformation
+- **Institutional Focus**: Completely rebuilt advisory.html to focus on "Strategic Finance & Public-Private Partnerships" for institutional clients instead of SMB/Finance Sprint services
+- **Content Restructure**: New sections include Profile, Core Advisory Focus Areas (Strategic & Transaction Advisory, Public-Private Architecture, Human-Capital Investment), Representative Work, and Engagement Scope
+- **Hidden Finance Sprint**: Kept finance-sprint.html unchanged but removed from navigation (only accessible via direct URL for targeted sharing)
+- **Backup Created**: Preserved original advisory page as advisory-backup.html for potential restoration
+- **PDF Placeholder**: Added public/JT_Wu_Capital_and_Community.pdf as placeholder for future one-pager
+
+### Visual Consistency Fixes
+- **Magnolia Pattern Alignment**: Fixed advisory.html to use EXACT same magnolia SVG pattern as homepage (was using different leaf gradient design)
+- **Pattern Details**: Ensured consistent positioning, rotation angles, and opacity values across all pages
+- **About Page Text Overflow**: Increased banner-info max-width from 500px → 600px → 750px to prevent "Strategic Finance Advisor & Civic Entrepreneur" text bleeding
+- **Font Size Optimization**: Reduced banner-title font from 1.3rem to 1.2rem for better fit within container
+- **Name Display Fix**: Resolved "Jonathan 'JT' Wu" text overflow issues on About page banner
